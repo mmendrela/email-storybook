@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJML Components - Interactive Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .component {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .component:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .component-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            border-bottom: none;
+        }
+
+        .component-title {
+            font-size: 1.8em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .component-description {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .component-content {
+            display: grid;
+            grid-template-columns: 300px 1fr 1fr;
+            gap: 0;
+            min-height: 600px;
+        }
+
+        .controls {
+            background: #f8fafc;
+            border-right: 1px solid #e2e8f0;
+            padding: 25px;
+            overflow-y: auto;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #374151;
+            font-size: 0.9em;
+        }
+
+        .control-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .control-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .control-checkbox {
+            margin-right: 8px;
+        }
+
+        .control-select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: white;
+            font-size: 14px;
+        }
+
+        .preview-container {
+            background: #f1f5f9;
+            border-right: 1px solid #e2e8f0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .preview-header {
+            background: #e2e8f0;
+            padding: 15px 20px;
+            border-bottom: 1px solid #cbd5e1;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .preview-frame {
+            flex: 1;
+            border: none;
+            width: 100%;
+            background: white;
+        }
+
+        .code-container {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .code-header {
+            background: #0f172a;
+            padding: 15px 20px;
+            border-bottom: 1px solid #334155;
+            font-weight: 600;
+            color: #94a3b8;
+        }
+
+        .code-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s ease;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background: #5a6fd8;
+        }
+
+        .btn-secondary {
+            background: #6b7280;
+        }
+
+        .btn-secondary:hover {
+            background: #5b6170;
+        }
+
+        @media (max-width: 1200px) {
+            .component-content {
+                grid-template-columns: 250px 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .component-content {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+            }
+            
+            .controls {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+            
+            .preview-container {
+                border-right: none;
+                border-bottom: 1px solid #e2e8f0;
+            }
+        }
+
+        .syntax-highlight {
+            background: #1e1e1e;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+    </style>
+    <script src="https://unpkg.com/mjml@4.15.3/dist/mjml.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎨 MJML Components</h1>
+            <p>Interactive playground for product email components</p>
+        </div>
+
+        <!-- AlternatingProductRow Component -->
+        <div class="component" id="alternating-product-row">
+            <div class="component-header">
+                <h2 class="component-title">AlternatingProductRow</h2>
+                <p class="component-description">Displays products in alternating left-right layout with images and descriptions</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="control-input" id="apr-title" value="Najnowsza Kolekcja">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Button Text</label>
+                        <input type="text" class="control-input" id="apr-buttonText" value="Zobacz więcej">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Image Width</label>
+                        <input type="text" class="control-input" id="apr-imageWidth" value="280px">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                            <input type="checkbox" class="control-checkbox" id="apr-showDescription" checked>
+                            Show Description
+                        </label>
+                    </div>
+                    <button class="btn" onclick="updateComponent('alternating-product-row')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="apr-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="apr-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ThreeCardsRow Component -->
+        <div class="component" id="three-cards-row">
+            <div class="component-header">
+                <h2 class="component-title">ThreeCardsRow</h2>
+                <p class="component-description">Shows three products side by side in a card layout</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="control-input" id="tcr-title" value="Bestsellery">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Button Text</label>
+                        <input type="text" class="control-input" id="tcr-buttonText" value="Shop Now">
+                    </div>
+                    <button class="btn" onclick="updateComponent('three-cards-row')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="tcr-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="tcr-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FourCardsRow Component -->
+        <div class="component" id="four-cards-row">
+            <div class="component-header">
+                <h2 class="component-title">FourCardsRow</h2>
+                <p class="component-description">Displays four products in a 2x2 grid layout</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="control-input" id="fcr-title" value="Polecane Produkty">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Button Text</label>
+                        <input type="text" class="control-input" id="fcr-buttonText" value="Shop Now">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                            <input type="checkbox" class="control-checkbox" id="fcr-compactMode" checked>
+                            Compact Mode
+                        </label>
+                    </div>
+                    <button class="btn" onclick="updateComponent('four-cards-row')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="fcr-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="fcr-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ProductGrid Component -->
+        <div class="component" id="product-grid">
+            <div class="component-header">
+                <h2 class="component-title">ProductGrid</h2>
+                <p class="component-description">Flexible grid layout for displaying multiple products</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="control-input" id="pg-title" value="Our Products">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Columns</label>
+                        <select class="control-select" id="pg-columns">
+                            <option value="2">2 columns</option>
+                            <option value="3" selected>3 columns</option>
+                            <option value="4">4 columns</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                            <input type="checkbox" class="control-checkbox" id="pg-showPrices" checked>
+                            Show Prices
+                        </label>
+                    </div>
+                    <button class="btn" onclick="updateComponent('product-grid')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="pg-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="pg-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OneProduct Component -->
+        <div class="component" id="one-product">
+            <div class="component-header">
+                <h2 class="component-title">OneProduct</h2>
+                <p class="component-description">Highlights a single product with centered layout</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Button Text</label>
+                        <input type="text" class="control-input" id="op-buttonText" value="Buy now">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                            <input type="checkbox" class="control-checkbox" id="op-showDescription" checked>
+                            Show Description
+                        </label>
+                    </div>
+                    <button class="btn" onclick="updateComponent('one-product')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="op-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="op-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OneProductLeft Component -->
+        <div class="component" id="one-product-left">
+            <div class="component-header">
+                <h2 class="component-title">OneProductLeft</h2>
+                <p class="component-description">Single product with left-aligned image and right-aligned content</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Button Text</label>
+                        <input type="text" class="control-input" id="opl-buttonText" value="Buy Now">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Image Width</label>
+                        <input type="text" class="control-input" id="opl-imageWidth" value="300px">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                            <input type="checkbox" class="control-checkbox" id="opl-showDescription" checked>
+                            Show Description
+                        </label>
+                    </div>
+                    <button class="btn" onclick="updateComponent('one-product-left')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="opl-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="opl-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CartSummary Component -->
+        <div class="component" id="cart-summary">
+            <div class="component-header">
+                <h2 class="component-title">CartSummary</h2>
+                <p class="component-description">Shopping cart summary with items, pricing and checkout button</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Title</label>
+                        <input type="text" class="control-input" id="cs-title" value="Your Order Summary">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Checkout Text</label>
+                        <input type="text" class="control-input" id="cs-checkoutText" value="Complete Purchase">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Subtotal</label>
+                        <input type="text" class="control-input" id="cs-subtotal" value="348 zł">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Shipping</label>
+                        <input type="text" class="control-input" id="cs-shipping" value="Free">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Tax</label>
+                        <input type="text" class="control-input" id="cs-tax" value="52 zł">
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">Total</label>
+                        <input type="text" class="control-input" id="cs-total" value="400 zł">
+                    </div>
+                    <button class="btn" onclick="updateComponent('cart-summary')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="cs-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="cs-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PricingTable Component -->
+        <div class="component" id="pricing-table">
+            <div class="component-header">
+                <h2 class="component-title">PricingTable</h2>
+                <p class="component-description">Pricing plans comparison table with features and CTAs</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Layout</label>
+                        <select class="control-select" id="pt-layout">
+                            <option value="two-tier" selected>Two-tier</option>
+                            <option value="simple">Simple</option>
+                        </select>
+                    </div>
+                    <button class="btn" onclick="updateComponent('pricing-table')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="pt-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="pt-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ImageGallery Component -->
+        <div class="component" id="image-gallery">
+            <div class="component-header">
+                <h2 class="component-title">ImageGallery</h2>
+                <p class="component-description">Flexible image gallery with multiple layout options</p>
+            </div>
+            <div class="component-content">
+                <div class="controls">
+                    <div class="control-group">
+                        <label class="control-label">Layout</label>
+                        <select class="control-select" id="ig-layout">
+                            <option value="grid-2x2" selected>Grid 2x2</option>
+                            <option value="horizontal">Horizontal</option>
+                            <option value="vertical">Vertical</option>
+                            <option value="three-columns">Three Columns</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label">
+                            <input type="checkbox" class="control-checkbox" id="ig-rounded" checked>
+                            Rounded Corners
+                        </label>
+                    </div>
+                    <button class="btn" onclick="updateComponent('image-gallery')">Update Preview</button>
+                </div>
+                <div class="preview-container">
+                    <div class="preview-header">📱 Email Preview</div>
+                    <iframe class="preview-frame" id="ig-preview"></iframe>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="ig-code"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 40px 0; color: white;">
+            <p><a href="/" style="color: #cbd5e1; text-decoration: none;">← Powrót do szablonów</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Brand configuration data from YAML
+        const brandConfig = {
+            store_name: 'SoItalian',
+            store_url: 'https://www.soitalian.pl/',
+            logo_url: 'https://www.soitalian.pl/img/logo-1643198138.jpg',
+            products: [
+                {
+                    name: 'Top Rieti Pink',
+                    href: 'https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html',
+                    image: 'https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg',
+                    price: '199 zł',
+                    originalPrice: '249 zł',
+                    description: 'Elegancki różowy top z wysokiej jakości materiału'
+                },
+                {
+                    name: 'Lovaria Hat – black ribbon',
+                    href: 'https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html',
+                    image: 'https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg',
+                    price: '149 zł',
+                    description: 'Stylowy kapelusz z czarną wstążką'
+                },
+                {
+                    name: 'Lovaria Hat – lace ribbon',
+                    href: 'https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html',
+                    image: 'https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg',
+                    price: '149 zł',
+                    description: 'Elegancki kapelusz z ażurową wstążką'
+                },
+                {
+                    name: 'Długi wełniany kardigan MAISON coral/white',
+                    href: 'https://www.soitalian.pl/pl/kardigany/604687-dlugi-welniany-kardigan-maison-coralwhite.html',
+                    image: 'https://www.soitalian.pl/85632-small_default/dlugi-welniany-kardigan-maison-coralwhite.jpg',
+                    price: '329 zł',
+                    originalPrice: '399 zł',
+                    description: 'Ciepły kardigan w kolorze koralowo-białym'
+                }
+            ]
+        };
+
+        function generateAlternatingProductRow(config) {
+            const title = config.title || 'Najnowsza Kolekcja';
+            const buttonText = config.buttonText || 'Zobacz więcej';
+            const imageWidth = config.imageWidth || '280px';
+            const showDescription = config.showDescription !== false;
+            
+            const products = brandConfig.products.slice(0, 3);
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${title}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">`;
+
+            // Title section
+            if (title) {
+                mjmlContent += `
+      <mj-section background-color="#ffffff" padding="40px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            ${title}
+          </mj-text>
+        </mj-column>
+      </mj-section>`;
+            }
+
+            // Product sections
+            products.forEach((product, index) => {
+                const isEven = index % 2 === 0;
+                const isLast = index === products.length - 1;
+                
+                if (isEven) {
+                    // Left image layout
+                    mjmlContent += `
+      <mj-section background-color="#ffffff" padding="${isLast ? '20px 30px 40px' : '20px 30px'}">
+        <mj-column width="45%">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="${imageWidth}"
+            border-radius="8px"
+            align="center"
+            padding="0 15px 0 0"
+          />
+        </mj-column>
+        <mj-column width="55%">
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            padding="0 0 12px 0"
+            line-height="32px"
+          >
+            ${product.name}
+          </mj-text>
+          ${showDescription && product.description ? `
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            padding="0 0 16px 0"
+            line-height="24px"
+          >
+            ${product.description}
+          </mj-text>` : ''}
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#059669"
+            padding="0 0 20px 0"
+          >
+            ${product.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; margin-right: 12px;">${product.originalPrice}</span>` : ''}
+            ${product.price}
+          </mj-text>
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="16px"
+            font-weight="bold"
+            padding="14px 28px"
+            border-radius="8px"
+            align="left"
+          >
+            ${buttonText}
+          </mj-button>
+        </mj-column>
+      </mj-section>`;
+                } else {
+                    // Right image layout
+                    mjmlContent += `
+      <mj-section background-color="#ffffff" padding="${isLast ? '20px 30px 40px' : '20px 30px'}">
+        <mj-column width="55%">
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            padding="0 0 12px 0"
+            line-height="32px"
+            align="right"
+          >
+            ${product.name}
+          </mj-text>
+          ${showDescription && product.description ? `
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            padding="0 0 16px 0"
+            line-height="24px"
+            align="right"
+          >
+            ${product.description}
+          </mj-text>` : ''}
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#059669"
+            padding="0 0 20px 0"
+            align="right"
+          >
+            ${product.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; margin-right: 12px;">${product.originalPrice}</span>` : ''}
+            ${product.price}
+          </mj-text>
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="16px"
+            font-weight="bold"
+            padding="14px 28px"
+            border-radius="8px"
+            align="right"
+          >
+            ${buttonText}
+          </mj-button>
+        </mj-column>
+        <mj-column width="45%">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="${imageWidth}"
+            border-radius="8px"
+            align="center"
+            padding="0 0 0 15px"
+          />
+        </mj-column>
+      </mj-section>`;
+                }
+            });
+
+            mjmlContent += `
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateThreeCardsRow(config) {
+            const title = config.title || 'Bestsellery';
+            const buttonText = config.buttonText || 'Shop Now';
+            const products = brandConfig.products.slice(0, 3);
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${title}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">`;
+
+            // Title section
+            if (title) {
+                mjmlContent += `
+      <mj-section background-color="#ffffff" padding="40px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            ${title}
+          </mj-text>
+        </mj-column>
+      </mj-section>`;
+            }
+
+            // Products section
+            mjmlContent += `
+      <mj-section background-color="#ffffff" padding="20px 15px 40px">`;
+
+            products.forEach(product => {
+                mjmlContent += `
+        <mj-column width="33.33%" padding="0 10px">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="160px"
+            border-radius="8px"
+            padding="0 0 15px 0"
+            align="center"
+          />
+          <mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 0"
+            height="50px"
+            line-height="22px"
+          >
+            ${product.name}
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 12px 0"
+            line-height="18px"
+            height="40px"
+          >
+            ${product.description || ''}
+          </mj-text>
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            ${product.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;">${product.originalPrice}</span>` : ''}
+            ${product.price}
+          </mj-text>
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 20px"
+            border-radius="6px"
+            width="140px"
+          >
+            ${buttonText}
+          </mj-button>
+        </mj-column>`;
+            });
+
+            mjmlContent += `
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateFourCardsRow(config) {
+            const title = config.title || 'Polecane Produkty';
+            const buttonText = config.buttonText || 'Shop Now';
+            const compactMode = config.compactMode || false;
+            const products = brandConfig.products.slice(0, 4);
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${title}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">`;
+
+            // Title section
+            if (title) {
+                mjmlContent += `
+      <mj-section background-color="#ffffff" padding="40px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            ${title}
+          </mj-text>
+        </mj-column>
+      </mj-section>`;
+            }
+
+            // Products in 2x2 grid
+            for (let i = 0; i < products.length; i += 2) {
+                const isLastRow = i >= products.length - 2;
+                mjmlContent += `
+      <mj-section background-color="#ffffff" padding="${isLastRow ? '15px 20px 40px' : '15px 20px'}">`;
+
+                const rowProducts = products.slice(i, i + 2);
+                rowProducts.forEach(product => {
+                    mjmlContent += `
+        <mj-column width="50%">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="${compactMode ? '160px' : '180px'}"
+            border-radius="8px"
+            padding="0 0 15px 0"
+            align="center"
+          />
+          <mj-text 
+            font-size="${compactMode ? '16px' : '18px'}"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 0"
+            line-height="${compactMode ? '20px' : '24px'}"
+            height="${compactMode ? '45px' : '50px'}"
+          >
+            ${product.name}
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 12px 0"
+            line-height="18px"
+            height="${compactMode ? '25px' : '35px'}"
+          >
+            ${!compactMode && product.description ? product.description : ''}
+          </mj-text>
+          <mj-text 
+            font-size="${compactMode ? '18px' : '20px'}"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            ${product.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: ${compactMode ? '14px' : '16px'}; margin-right: 8px;">${product.originalPrice}</span>` : ''}
+            ${product.price}
+          </mj-text>
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="${compactMode ? '14px' : '16px'}"
+            font-weight="bold"
+            padding="${compactMode ? '12px 24px' : '14px 28px'}"
+            border-radius="6px"
+            width="${compactMode ? '160px' : '180px'}"
+          >
+            ${buttonText}
+          </mj-button>
+        </mj-column>`;
+                });
+
+                mjmlContent += `
+      </mj-section>`;
+            }
+
+            mjmlContent += `
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateProductGrid(config) {
+            const title = config.title || 'Our Products';
+            const columns = parseInt(config.columns) || 3;
+            const showPrices = config.showPrices !== false;
+            const products = brandConfig.products;
+            
+            const columnWidth = columns === 2 ? '50%' : columns === 3 ? '33.33%' : '25%';
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${title}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">`;
+
+            // Title section
+            if (title) {
+                mjmlContent += `
+      <mj-section padding="40px 30px 20px" background-color="#f7f4f2">
+        <mj-column>
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+          >
+            ${title}
+          </mj-text>
+        </mj-column>
+      </mj-section>`;
+            }
+
+            // Products grid
+            for (let i = 0; i < products.length; i += columns) {
+                mjmlContent += `
+      <mj-section background-color="#f7f4f2" padding="20px 30px">`;
+
+                const rowProducts = products.slice(i, i + columns);
+                rowProducts.forEach(product => {
+                    mjmlContent += `
+        <mj-column width="${columnWidth}">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          >
+            ${product.name}
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          >
+            ${product.description || ''}
+          </mj-text>
+          ${showPrices ? `
+          <mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          >
+            ${product.price}
+          </mj-text>` : ''}
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          >
+            View Product
+          </mj-button>
+        </mj-column>`;
+                });
+
+                mjmlContent += `
+      </mj-section>`;
+            }
+
+            mjmlContent += `
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateOneProduct(config) {
+            const buttonText = config.buttonText || 'Buy now';
+            const showDescription = config.showDescription !== false;
+            const product = brandConfig.products[0]; // First product
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${product.name}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">
+      <mj-section background-color="#ffffff" padding="40px 30px" border-radius="12px" border="1px solid #e5e7eb">
+        <mj-column width="100%">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="300px"
+            border-radius="8px"
+          />
+        </mj-column>
+        
+        <mj-column width="100%" padding="20px 0 0 0">
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 12px 0"
+          >
+            ${product.name}
+          </mj-text>
+          
+          ${showDescription && product.description ? `
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            line-height="24px"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            ${product.description}
+          </mj-text>` : ''}
+          
+          <mj-text align="center" padding="0 0 25px 0">
+            ${product.originalPrice 
+              ? `<span style="font-size: 20px; color: #dc2626; font-weight: bold;">${product.price}</span> <span style="font-size: 16px; color: #9ca3af; text-decoration: line-through;">${product.originalPrice}</span>`
+              : `<span style="font-size: 20px; color: #1f2937; font-weight: bold;">${product.price}</span>`
+            }
+          </mj-text>
+          
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="16px"
+            font-weight="bold"
+            padding="14px 28px"
+            border-radius="8px"
+          >
+            ${buttonText}
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateOneProductLeft(config) {
+            const buttonText = config.buttonText || 'Buy Now';
+            const imageWidth = config.imageWidth || '300px';
+            const showDescription = config.showDescription !== false;
+            const product = brandConfig.products[0]; // First product
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${product.name}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">
+      <mj-section background-color="#ffffff" padding="40px 30px">
+        <mj-column width="50%">
+          <mj-image 
+            src="${product.image}"
+            alt="${product.name}"
+            width="${imageWidth}"
+            border-radius="8px"
+            padding="0 15px 0 0"
+          />
+        </mj-column>
+        <mj-column width="50%">
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#1f2937"
+            padding="0 0 15px 0"
+            line-height="36px"
+          >
+            ${product.name}
+          </mj-text>
+          ${showDescription && product.description ? `
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            padding="0 0 20px 0"
+            line-height="24px"
+          >
+            ${product.description}
+          </mj-text>` : ''}
+          <mj-text 
+            font-size="32px"
+            font-weight="bold"
+            color="#059669"
+            padding="0 0 25px 0"
+          >
+            ${product.originalPrice ? `<span style="text-decoration: line-through; color: #9ca3af; font-size: 20px; margin-right: 12px;">${product.originalPrice}</span>` : ''}
+            ${product.price}
+          </mj-text>
+          <mj-button 
+            href="${product.href}"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="18px"
+            font-weight="bold"
+            padding="16px 40px"
+            border-radius="8px"
+            width="200px"
+          >
+            ${buttonText}
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateCartSummary(config) {
+            const title = config.title || 'Your Order Summary';
+            const checkoutText = config.checkoutText || 'Complete Purchase';
+            const subtotal = config.subtotal || '348 zł';
+            const shipping = config.shipping || 'Free';
+            const tax = config.tax || '52 zł';
+            const total = config.total || '400 zł';
+            
+            const items = [
+                {
+                    name: brandConfig.products[0].name,
+                    image: brandConfig.products[0].image,
+                    price: brandConfig.products[0].price,
+                    quantity: 1
+                },
+                {
+                    name: brandConfig.products[1].name,
+                    image: brandConfig.products[1].image,
+                    price: brandConfig.products[1].price,
+                    quantity: 2
+                }
+            ];
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>${title}</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">
+      <mj-section padding="30px 30px 20px" background-color="#ffffff">
+        <mj-column>
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+          >
+            ${title}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section background-color="#ffffff" padding="20px 30px" border="1px solid #e5e7eb" border-radius="8px">`;
+
+            items.forEach(item => {
+                mjmlContent += `
+        <mj-column width="25%">
+          <mj-image 
+            src="${item.image}"
+            alt="${item.name}"
+            width="80px"
+            border-radius="6px"
+          />
+        </mj-column>
+        <mj-column width="50%">
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            ${item.name}
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+          >
+            Quantity: ${item.quantity}
+          </mj-text>
+        </mj-column>
+        <mj-column width="25%">
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="right"
+          >
+            ${item.price}
+          </mj-text>
+        </mj-column>`;
+            });
+
+            mjmlContent += `
+      </mj-section>
+      
+      <mj-section background-color="#f9fafb" padding="30px" border="1px solid #e5e7eb" border-radius="8px">
+        <mj-column>
+          <mj-table>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td style="padding: 12px 0; font-size: 16px; color: #374151;">Subtotal</td>
+              <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">${subtotal}</td>
+            </tr>
+            ${shipping ? `
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td style="padding: 12px 0; font-size: 16px; color: #374151;">Shipping</td>
+              <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">${shipping}</td>
+            </tr>` : ''}
+            ${tax ? `
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td style="padding: 12px 0; font-size: 16px; color: #374151;">Tax</td>
+              <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">${tax}</td>
+            </tr>` : ''}
+            <tr>
+              <td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; font-weight: bold;">Total</td>
+              <td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; text-align: right; font-weight: bold;">${total}</td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section padding="30px">
+        <mj-column>
+          <mj-button 
+            href="${brandConfig.store_url}"
+            background-color="#059669"
+            color="#ffffff"
+            font-size="18px"
+            font-weight="bold"
+            padding="16px 40px"
+            border-radius="8px"
+            width="100%"
+          >
+            ${checkoutText}
+          </mj-button>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generatePricingTable(config) {
+            const layout = config.layout || 'two-tier';
+            
+            const plans = [
+                {
+                    name: 'Basic Plan',
+                    price: '$29',
+                    period: 'per month',
+                    features: ['Up to 10 products', 'Basic analytics', 'Email support', '1 store location'],
+                    buttonText: 'Get Started',
+                    buttonUrl: brandConfig.store_url,
+                    emphasized: false,
+                    badge: null
+                },
+                {
+                    name: 'Professional Plan',
+                    price: '$79',
+                    period: 'per month',
+                    features: ['Unlimited products', 'Advanced analytics', 'Priority support', 'Multiple store locations', 'Custom branding'],
+                    buttonText: 'Choose Pro',
+                    buttonUrl: brandConfig.store_url,
+                    emphasized: true,
+                    badge: 'Popular'
+                }
+            ];
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>Pricing Plans</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">`;
+
+            if (layout === 'simple') {
+                plans.forEach(plan => {
+                    mjmlContent += `
+      <mj-section 
+        background-color="${plan.emphasized ? '#f9fafb' : '#ffffff'}"
+        border="${plan.emphasized ? '2px solid #3b82f6' : '1px solid #e5e7eb'}"
+        border-radius="12px"
+        padding="40px 30px"
+      >
+        <mj-column>
+          ${plan.badge ? `
+          <mj-text 
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            text-transform="uppercase"
+            align="center"
+            padding="8px 16px"
+            border-radius="20px"
+            margin="0 0 20px 0"
+          >
+            ${plan.badge}
+          </mj-text>` : ''}
+          
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            ${plan.name}
+          </mj-text>
+          
+          <mj-text 
+            font-size="48px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            ${plan.price}
+          </mj-text>
+          
+          ${plan.period ? `
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 30px 0"
+          >
+            ${plan.period}
+          </mj-text>` : ''}
+          
+          <mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="24px"
+            align="center"
+            padding="0 0 30px 0"
+          >
+            ${plan.features.map(feature => `• ${feature}`).join('<br>')}
+          </mj-text>
+          
+          <mj-button 
+            href="${plan.buttonUrl}"
+            background-color="${plan.emphasized ? '#3b82f6' : '#1f2937'}"
+            color="#ffffff"
+            font-size="16px"
+            font-weight="bold"
+            padding="14px 32px"
+            border-radius="8px"
+            width="100%"
+          >
+            ${plan.buttonText}
+          </mj-button>
+        </mj-column>
+      </mj-section>`;
+                });
+            } else {
+                // Two-tier layout
+                const columnWidth = plans.length === 2 ? '50%' : `${100 / plans.length}%`;
+                
+                mjmlContent += `
+      <mj-section background-color="#f9fafb" padding="40px 20px">`;
+
+                plans.forEach(plan => {
+                    mjmlContent += `
+        <mj-column 
+          width="${columnWidth}"
+          background-color="${plan.emphasized ? '#ffffff' : '#f8fafc'}"
+          border="${plan.emphasized ? '2px solid #3b82f6' : '1px solid #e5e7eb'}"
+          border-radius="12px"
+          padding="30px 20px"
+        >
+          ${plan.badge ? `
+          <mj-text 
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            text-transform="uppercase"
+            align="center"
+            padding="6px 12px"
+            border-radius="16px"
+            margin="0 0 20px 0"
+          >
+            ${plan.badge}
+          </mj-text>` : ''}
+          
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            ${plan.name}
+          </mj-text>
+          
+          <mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            ${plan.price}
+          </mj-text>
+          
+          ${plan.period ? `
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            ${plan.period}
+          </mj-text>` : ''}
+          
+          <mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            ${plan.features.map(feature => `• ${feature}`).join('<br>')}
+          </mj-text>
+          
+          <mj-button 
+            href="${plan.buttonUrl}"
+            background-color="${plan.emphasized ? '#3b82f6' : '#1f2937'}"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          >
+            ${plan.buttonText}
+          </mj-button>
+        </mj-column>`;
+                });
+
+                mjmlContent += `
+      </mj-section>`;
+            }
+
+            mjmlContent += `
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function generateImageGallery(config) {
+            const layout = config.layout || 'grid-2x2';
+            const rounded = config.rounded !== false;
+            const borderRadius = rounded ? '8px' : '0px';
+            
+            const images = [
+                {
+                    src: brandConfig.products[0].image,
+                    alt: brandConfig.products[0].name,
+                    href: brandConfig.products[0].href
+                },
+                {
+                    src: brandConfig.products[1].image,
+                    alt: brandConfig.products[1].name,
+                    href: brandConfig.products[1].href
+                },
+                {
+                    src: brandConfig.products[2].image,
+                    alt: brandConfig.products[2].name,
+                    href: brandConfig.products[2].href
+                },
+                {
+                    src: brandConfig.products[3].image,
+                    alt: brandConfig.products[3].name,
+                    href: brandConfig.products[3].href
+                }
+            ];
+            
+            let mjmlContent = `<mjml lang="pl">
+  <mj-head>
+    <mj-title>Image Gallery</mj-title>
+  </mj-head>
+  <mj-body background-color="#f7f4f2">
+    <mj-wrapper max-width="600px">`;
+
+            let galleryContent = '';
+
+            switch (layout) {
+                case 'grid-2x2': {
+                    for (let i = 0; i < images.length; i += 2) {
+                        mjmlContent += `
+      <mj-section background-color="#ffffff" padding="10px 20px">`;
+
+                        const rowImages = images.slice(i, i + 2);
+                        rowImages.forEach(image => {
+                            mjmlContent += `
+        <mj-column width="50%">
+          ${image.href ? `<mj-button href="${image.href}" background-color="transparent" padding="0">` : ''}
+            <mj-image 
+              src="${image.src}"
+              alt="${image.alt}"
+              border-radius="${borderRadius}"
+              padding="5px"
+            />
+          ${image.href ? '</mj-button>' : ''}
+        </mj-column>`;
+                        });
+
+                        mjmlContent += `
+      </mj-section>`;
+                    }
+                    break;
+                }
+
+                case 'horizontal': {
+                    const columnWidth = `${100 / Math.min(images.length, 4)}%`;
+                    const displayImages = images.slice(0, 4);
+                    
+                    mjmlContent += `
+      <mj-section background-color="#ffffff" padding="20px">`;
+
+                    displayImages.forEach(image => {
+                        mjmlContent += `
+        <mj-column width="${columnWidth}">
+          ${image.href ? `<mj-button href="${image.href}" background-color="transparent" padding="0">` : ''}
+            <mj-image 
+              src="${image.src}"
+              alt="${image.alt}"
+              border-radius="${borderRadius}"
+              padding="5px"
+            />
+          ${image.href ? '</mj-button>' : ''}
+        </mj-column>`;
+                    });
+
+                    mjmlContent += `
+      </mj-section>`;
+                    break;
+                }
+
+                case 'vertical': {
+                    images.forEach(image => {
+                        mjmlContent += `
+      <mj-section background-color="#ffffff" padding="10px 30px">
+        <mj-column>
+          ${image.href ? `<mj-button href="${image.href}" background-color="transparent" padding="0">` : ''}
+            <mj-image 
+              src="${image.src}"
+              alt="${image.alt}"
+              border-radius="${borderRadius}"
+            />
+          ${image.href ? '</mj-button>' : ''}
+        </mj-column>
+      </mj-section>`;
+                    });
+                    break;
+                }
+
+                case 'three-columns': {
+                    for (let i = 0; i < images.length; i += 3) {
+                        mjmlContent += `
+      <mj-section background-color="#ffffff" padding="10px 20px">`;
+
+                        const rowImages = images.slice(i, i + 3);
+                        rowImages.forEach(image => {
+                            mjmlContent += `
+        <mj-column width="33.33%">
+          ${image.href ? `<mj-button href="${image.href}" background-color="transparent" padding="0">` : ''}
+            <mj-image 
+              src="${image.src}"
+              alt="${image.alt}"
+              border-radius="${borderRadius}"
+              padding="5px"
+            />
+          ${image.href ? '</mj-button>' : ''}
+        </mj-column>`;
+                        });
+
+                        mjmlContent += `
+      </mj-section>`;
+                    }
+                    break;
+                }
+            }
+
+            mjmlContent += `
+    </mj-wrapper>
+  </mj-body>
+</mjml>`;
+
+            return mjmlContent;
+        }
+
+        function updateComponent(componentId) {
+            let config = {};
+            let mjmlContent = '';
+
+            // Get configuration based on component
+            switch (componentId) {
+                case 'alternating-product-row':
+                    config = {
+                        title: document.getElementById('apr-title').value,
+                        buttonText: document.getElementById('apr-buttonText').value,
+                        imageWidth: document.getElementById('apr-imageWidth').value,
+                        showDescription: document.getElementById('apr-showDescription').checked
+                    };
+                    mjmlContent = generateAlternatingProductRow(config);
+                    break;
+
+                case 'three-cards-row':
+                    config = {
+                        title: document.getElementById('tcr-title').value,
+                        buttonText: document.getElementById('tcr-buttonText').value
+                    };
+                    mjmlContent = generateThreeCardsRow(config);
+                    break;
+
+                case 'four-cards-row':
+                    config = {
+                        title: document.getElementById('fcr-title').value,
+                        buttonText: document.getElementById('fcr-buttonText').value,
+                        compactMode: document.getElementById('fcr-compactMode').checked
+                    };
+                    mjmlContent = generateFourCardsRow(config);
+                    break;
+
+                case 'product-grid':
+                    config = {
+                        title: document.getElementById('pg-title').value,
+                        columns: document.getElementById('pg-columns').value,
+                        showPrices: document.getElementById('pg-showPrices').checked
+                    };
+                    mjmlContent = generateProductGrid(config);
+                    break;
+
+                case 'one-product':
+                    config = {
+                        buttonText: document.getElementById('op-buttonText').value,
+                        showDescription: document.getElementById('op-showDescription').checked
+                    };
+                    mjmlContent = generateOneProduct(config);
+                    break;
+
+                case 'one-product-left':
+                    config = {
+                        buttonText: document.getElementById('opl-buttonText').value,
+                        imageWidth: document.getElementById('opl-imageWidth').value,
+                        showDescription: document.getElementById('opl-showDescription').checked
+                    };
+                    mjmlContent = generateOneProductLeft(config);
+                    break;
+
+                case 'cart-summary':
+                    config = {
+                        title: document.getElementById('cs-title').value,
+                        checkoutText: document.getElementById('cs-checkoutText').value,
+                        subtotal: document.getElementById('cs-subtotal').value,
+                        shipping: document.getElementById('cs-shipping').value,
+                        tax: document.getElementById('cs-tax').value,
+                        total: document.getElementById('cs-total').value
+                    };
+                    mjmlContent = generateCartSummary(config);
+                    break;
+
+                case 'pricing-table':
+                    config = {
+                        layout: document.getElementById('pt-layout').value
+                    };
+                    mjmlContent = generatePricingTable(config);
+                    break;
+
+                case 'image-gallery':
+                    config = {
+                        layout: document.getElementById('ig-layout').value,
+                        rounded: document.getElementById('ig-rounded').checked
+                    };
+                    mjmlContent = generateImageGallery(config);
+                    break;
+            }
+
+            // Update code display
+            const codeElement = document.getElementById(componentId.replace(/-/g, '-') + '-code');
+            if (codeElement) {
+                codeElement.textContent = mjmlContent;
+            }
+
+            // Update preview
+            if (typeof mjml !== 'undefined' && mjml.mjml2html) {
+                try {
+                    const result = mjml.mjml2html(mjmlContent);
+                    const previewFrame = document.getElementById(componentId.replace(/-/g, '-') + '-preview');
+                    if (previewFrame && result.html) {
+                        previewFrame.srcdoc = result.html;
+                    }
+                } catch (error) {
+                    console.error('MJML compilation error:', error);
+                    // Fallback: show raw MJML in iframe
+                    const previewFrame = document.getElementById(componentId.replace(/-/g, '-') + '-preview');
+                    if (previewFrame) {
+                        previewFrame.srcdoc = `<pre style="padding: 20px; font-family: monospace; font-size: 12px;">${mjmlContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre>`;
+                    }
+                }
+            }
+        }
+
+        // Initialize all components on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const components = [
+                'alternating-product-row',
+                'three-cards-row', 
+                'four-cards-row',
+                'product-grid',
+                'one-product',
+                'one-product-left',
+                'cart-summary',
+                'pricing-table',
+                'image-gallery'
+            ];
+            
+            components.forEach(componentId => {
+                updateComponent(componentId);
+            });
+        });
+    </script>
+</body>
+</html>
