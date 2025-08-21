@@ -150,6 +150,8 @@
             border: none;
             width: 100%;
             background: white;
+            overflow-y: auto;
+            padding: 20px;
         }
 
         .code-container {
@@ -271,7 +273,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="apr-preview"></iframe>
+                    <div class="preview-frame" id="apr-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -302,7 +304,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="tcr-preview"></iframe>
+                    <div class="preview-frame" id="tcr-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -339,7 +341,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="fcr-preview"></iframe>
+                    <div class="preview-frame" id="fcr-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -380,7 +382,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="pg-preview"></iframe>
+                    <div class="preview-frame" id="pg-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -413,7 +415,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="op-preview"></iframe>
+                    <div class="preview-frame" id="op-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -450,7 +452,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="opl-preview"></iframe>
+                    <div class="preview-frame" id="opl-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -497,7 +499,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="cs-preview"></iframe>
+                    <div class="preview-frame" id="cs-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -527,7 +529,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="pt-preview"></iframe>
+                    <div class="preview-frame" id="pt-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -565,7 +567,7 @@
                 </div>
                 <div class="preview-container">
                     <div class="preview-header">📱 Email Preview</div>
-                    <iframe class="preview-frame" id="ig-preview"></iframe>
+                    <div class="preview-frame" id="ig-preview"></div>
                 </div>
                 <div class="code-container">
                     <div class="code-header">📄 MJML Code</div>
@@ -1820,9 +1822,9 @@
                 codeElement.textContent = mjmlContent;
             }
 
-            // Update preview using MJML library
-            const previewFrame = document.getElementById(componentId.replace(/-/g, '-') + '-preview');
-            if (previewFrame) {
+            // Update preview using MJML library (direct HTML insertion)
+            const previewDiv = document.getElementById(componentId.replace(/-/g, '-') + '-preview');
+            if (previewDiv) {
                 // Wait for MJML library to be available
                 if (typeof mjml !== 'undefined') {
                     try {
@@ -1831,17 +1833,23 @@
                             minify: false
                         });
                         if (mjmlResult.html) {
-                            previewFrame.srcdoc = mjmlResult.html;
+                            // Extract body content from compiled HTML and inject directly
+                            const bodyMatch = mjmlResult.html.match(/<body[^>]*>([\s\S]*)<\/body>/i);
+                            if (bodyMatch) {
+                                previewDiv.innerHTML = bodyMatch[1];
+                            } else {
+                                previewDiv.innerHTML = mjmlResult.html;
+                            }
                         } else if (mjmlResult.errors && mjmlResult.errors.length > 0) {
-                            previewFrame.srcdoc = `<div style="padding: 20px; color: red; font-family: Arial, sans-serif;"><strong>MJML Compilation Errors:</strong><br>${mjmlResult.errors.map(err => err.message).join('<br>')}<br><br><pre style="background: #f5f5f5; padding: 10px; font-size: 12px; white-space: pre-wrap;">${mjmlContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre></div>`;
+                            previewDiv.innerHTML = `<div style="color: red; font-family: Arial, sans-serif;"><strong>MJML Compilation Errors:</strong><br>${mjmlResult.errors.map(err => err.message).join('<br>')}<br><br><pre style="background: #f5f5f5; padding: 10px; font-size: 12px; white-space: pre-wrap;">${mjmlContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre></div>`;
                         }
                     } catch (error) {
                         console.error('MJML compilation error:', error);
-                        previewFrame.srcdoc = `<div style="padding: 20px; color: red; font-family: Arial, sans-serif;"><strong>Preview Error:</strong><br>${error.message || 'Failed to compile MJML'}<br><br><pre style="background: #f5f5f5; padding: 10px; font-size: 12px; white-space: pre-wrap;">${mjmlContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre></div>`;
+                        previewDiv.innerHTML = `<div style="color: red; font-family: Arial, sans-serif;"><strong>Preview Error:</strong><br>${error.message || 'Failed to compile MJML'}<br><br><pre style="background: #f5f5f5; padding: 10px; font-size: 12px; white-space: pre-wrap;">${mjmlContent.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</pre></div>`;
                     }
                 } else {
                     // MJML library not loaded yet, show loading message
-                    previewFrame.srcdoc = `<div style="padding: 20px; color: #666; font-family: Arial, sans-serif; text-align: center;"><div style="font-size: 24px; margin-bottom: 10px;">⏳</div><strong>Loading MJML...</strong><br>Please wait while the preview loads.</div>`;
+                    previewDiv.innerHTML = `<div style="color: #666; font-family: Arial, sans-serif; text-align: center;"><div style="font-size: 24px; margin-bottom: 10px;">⏳</div><strong>Loading MJML...</strong><br>Please wait while the preview loads.</div>`;
                     // Retry after a short delay
                     setTimeout(() => updateComponent(componentId), 500);
                 }
