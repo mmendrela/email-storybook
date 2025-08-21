@@ -471,17 +471,13 @@
                     <button class="btn" onclick="updateComponent('four-cards-row')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('fcr', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('fcr', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="fcr-preview-tab">
-                        <div class="preview-frame" id="fcr-preview"></div>
-                    </div>
-                    <div class="tab-content" id="fcr-code-tab">
-                        <div class="code-content">
-                            <pre id="fcr-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="fcr-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="fcr-code"></pre>
                     </div>
                 </div>
             </div>
@@ -516,17 +512,13 @@
                     <button class="btn" onclick="updateComponent('product-grid')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('pg', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('pg', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="pg-preview-tab">
-                        <div class="preview-frame" id="pg-preview"></div>
-                    </div>
-                    <div class="tab-content" id="pg-code-tab">
-                        <div class="code-content">
-                            <pre id="pg-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="pg-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="pg-code"></pre>
                     </div>
                 </div>
             </div>
@@ -553,17 +545,13 @@
                     <button class="btn" onclick="updateComponent('one-product')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('op', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('op', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="op-preview-tab">
-                        <div class="preview-frame" id="op-preview"></div>
-                    </div>
-                    <div class="tab-content" id="op-code-tab">
-                        <div class="code-content">
-                            <pre id="op-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="op-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="op-code"></pre>
                     </div>
                 </div>
             </div>
@@ -594,17 +582,13 @@
                     <button class="btn" onclick="updateComponent('one-product-left')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('opl', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('opl', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="opl-preview-tab">
-                        <div class="preview-frame" id="opl-preview"></div>
-                    </div>
-                    <div class="tab-content" id="opl-code-tab">
-                        <div class="code-content">
-                            <pre id="opl-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="opl-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="opl-code"></pre>
                     </div>
                 </div>
             </div>
@@ -645,17 +629,13 @@
                     <button class="btn" onclick="updateComponent('cart-summary')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('cs', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('cs', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="cs-preview-tab">
-                        <div class="preview-frame" id="cs-preview"></div>
-                    </div>
-                    <div class="tab-content" id="cs-code-tab">
-                        <div class="code-content">
-                            <pre id="cs-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="cs-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="cs-code"></pre>
                     </div>
                 </div>
             </div>
@@ -679,17 +659,13 @@
                     <button class="btn" onclick="updateComponent('pricing-table')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('pt', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('pt', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="pt-preview-tab">
-                        <div class="preview-frame" id="pt-preview"></div>
-                    </div>
-                    <div class="tab-content" id="pt-code-tab">
-                        <div class="code-content">
-                            <pre id="pt-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="pt-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="pt-code"></pre>
                     </div>
                 </div>
             </div>
@@ -721,17 +697,13 @@
                     <button class="btn" onclick="updateComponent('image-gallery')">Update Preview</button>
                 </div>
                 <div class="preview-container">
-                    <div class="preview-tabs">
-                        <button class="tab-button active" onclick="switchTab('ig', 'preview')">📱 Email Preview</button>
-                        <button class="tab-button" onclick="switchTab('ig', 'code')">📄 MJML Code</button>
-                    </div>
-                    <div class="tab-content active" id="ig-preview-tab">
-                        <div class="preview-frame" id="ig-preview"></div>
-                    </div>
-                    <div class="tab-content" id="ig-code-tab">
-                        <div class="code-content">
-                            <pre id="ig-code"></pre>
-                        </div>
+                    <div class="preview-header">📱 Email Preview</div>
+                    <div class="preview-frame" id="ig-preview"></div>
+                </div>
+                <div class="code-container">
+                    <div class="code-header">📄 MJML Code</div>
+                    <div class="code-content">
+                        <pre id="ig-code"></pre>
                     </div>
                 </div>
             </div>
@@ -2018,29 +1990,6 @@
             }
         }
         
-        function switchTab(componentId, tabType) {
-            // Hide all tabs for this component
-            const previewTab = document.getElementById(componentId + '-preview-tab');
-            const codeTab = document.getElementById(componentId + '-code-tab');
-            const previewButton = previewTab.parentElement.querySelector('button[onclick*="preview"]');
-            const codeButton = codeTab.parentElement.querySelector('button[onclick*="code"]');
-            
-            // Remove active classes
-            previewTab.classList.remove('active');
-            codeTab.classList.remove('active');
-            previewButton.classList.remove('active');
-            codeButton.classList.remove('active');
-            
-            // Add active class to selected tab
-            if (tabType === 'preview') {
-                previewTab.classList.add('active');
-                previewButton.classList.add('active');
-            } else {
-                codeTab.classList.add('active');
-                codeButton.classList.add('active');
-            }
-        }
-
         function updatePreviewDiv(previewDiv, mjmlContent) {
             if (previewDiv) {
                 try {
