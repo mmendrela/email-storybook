@@ -1,0 +1,55 @@
+<!-- OneProduct Component - Single Product Card -->
+<mj-section 
+  background-color="#ffffff" 
+  padding="40px 30px" 
+  border-radius="12px" 
+  border="1px solid #e5e7eb"
+>
+  <mj-column width="100%">
+    <mj-image 
+      src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+      alt="Top Rieti Pink"
+      width="300px"
+      border-radius="8px"
+    />
+  </mj-column>
+  
+  <mj-column width="100%" padding="20px 0 0 0">
+    <mj-text 
+      font-size="24px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 12px 0"
+    >
+      Top Rieti Pink
+    </mj-text>
+    
+    <mj-text 
+      font-size="16px"
+      color="#6b7280"
+      line-height="24px"
+      align="center"
+      padding="0 0 20px 0"
+    >
+      Elegancki top w różowym kolorze, idealny na letnie dni. Wykonany z wysokiej jakości materiałów.
+    </mj-text>
+    
+    <mj-text align="center" padding="0 0 25px 0">
+      <span style="font-size: 20px; color: #dc2626; font-weight: bold;">199 zł</span> 
+      <span style="font-size: 16px; color: #9ca3af; text-decoration: line-through;">249 zł</span>
+    </mj-text>
+    
+    <mj-button 
+      href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="16px"
+      font-weight="bold"
+      padding="14px 28px"
+      border-radius="8px"
+    >
+      Kup teraz
+    </mj-button>
+  </mj-column>
+</mj-section>

@@ -1,0 +1,164 @@
+<!-- ProductGrid Component - Grid Layout for Multiple Products -->
+
+<!-- Grid Title -->
+<mj-section padding="40px 30px 20px" background-color="#f7f4f2">
+  <mj-column>
+    <mj-text 
+      font-size="24px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+    >
+      Nasze Produkty
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+<!-- Product Grid - 3 columns -->
+<mj-section background-color="#f7f4f2" padding="20px 30px">
+  
+  <!-- Row 1 -->
+  <mj-column width="33.33%">
+    <mj-image 
+      src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+      alt="Top Rieti Pink"
+      width="180px"
+      border-radius="8px"
+      padding="0 10px 15px"
+    />
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 10px 8px"
+    >
+      Top Rieti Pink
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 10px 8px"
+      line-height="20px"
+    >
+      Elegancki różowy top na lato
+    </mj-text>
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 10px 15px"
+    >
+      199 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+    >
+      View Product
+    </mj-button>
+  </mj-column>
+
+  <mj-column width="33.33%">
+    <mj-image 
+      src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+      alt="Lovaria Hat – black ribbon"
+      width="180px"
+      border-radius="8px"
+      padding="0 10px 15px"
+    />
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 10px 8px"
+    >
+      Lovaria Hat – black ribbon
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 10px 8px"
+      line-height="20px"
+    >
+      Stylowy kapelusz z czarną wstążką
+    </mj-text>
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 10px 15px"
+    >
+      149 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+    >
+      View Product
+    </mj-button>
+  </mj-column>
+
+  <mj-column width="33.33%">
+    <mj-image 
+      src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+      alt="Lovaria Hat – lace ribbon"
+      width="180px"
+      border-radius="8px"
+      padding="0 10px 15px"
+    />
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 10px 8px"
+    >
+      Lovaria Hat – lace ribbon
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 10px 8px"
+      line-height="20px"
+    >
+      Kapelusz z delikatną koronkową wstążką
+    </mj-text>
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 10px 15px"
+    >
+      149 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/pl/akcesoria/604672-kapelusz-lovaria-beige-z-azurowa-wstazka.html"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+    >
+      View Product
+    </mj-button>
+  </mj-column>
+</mj-section>

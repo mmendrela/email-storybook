@@ -1,0 +1,147 @@
+<!-- PricingTable Component - Two-tier Pricing Layout -->
+
+<mj-section background-color="#f9fafb" padding="40px 20px">
+  
+  <!-- Plan 1 - Basic -->
+  <mj-column 
+    width="50%"
+    background-color="#f8fafc"
+    border="1px solid #e5e7eb"
+    border-radius="12px"
+    padding="30px 20px"
+  >
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      Plan Basic
+    </mj-text>
+    
+    <mj-text 
+      font-size="36px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 5px 0"
+    >
+      99 zł
+    </mj-text>
+    
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 25px 0"
+    >
+      miesięcznie
+    </mj-text>
+    
+    <mj-text 
+      font-size="14px"
+      color="#374151"
+      line-height="22px"
+      align="center"
+      padding="0 0 25px 0"
+    >
+      • Dostęp do wszystkich topów<br>
+      • Bezpłatne zwroty<br>
+      • Wsparcie email<br>
+      • Newsletter z promocjami
+    </mj-text>
+    
+    <mj-button 
+      href="https://www.soitalian.pl/plans/basic"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+      width="100%"
+    >
+      Wybierz plan
+    </mj-button>
+  </mj-column>
+
+  <!-- Plan 2 - Premium (Emphasized) -->
+  <mj-column 
+    width="50%"
+    background-color="#ffffff"
+    border="2px solid #3b82f6"
+    border-radius="12px"
+    padding="30px 20px"
+  >
+    <mj-text 
+      background-color="#3b82f6"
+      color="#ffffff"
+      font-size="12px"
+      font-weight="bold"
+      text-transform="uppercase"
+      align="center"
+      padding="6px 12px"
+      border-radius="16px"
+      margin="0 0 20px 0"
+    >
+      Popularne
+    </mj-text>
+    
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      Plan Premium
+    </mj-text>
+    
+    <mj-text 
+      font-size="36px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 5px 0"
+    >
+      199 zł
+    </mj-text>
+    
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 25px 0"
+    >
+      miesięcznie
+    </mj-text>
+    
+    <mj-text 
+      font-size="14px"
+      color="#374151"
+      line-height="22px"
+      align="center"
+      padding="0 0 25px 0"
+    >
+      • Wszystko z planu Basic<br>
+      • Dostęp do kolekcji VIP<br>
+      • Darmowa dostawa<br>
+      • Personal shopper<br>
+      • Priorytetowe wsparcie
+    </mj-text>
+    
+    <mj-button 
+      href="https://www.soitalian.pl/plans/premium"
+      background-color="#3b82f6"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+      width="100%"
+    >
+      Wybierz plan
+    </mj-button>
+  </mj-column>
+</mj-section>

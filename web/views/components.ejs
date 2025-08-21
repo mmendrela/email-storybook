@@ -1,0 +1,157 @@
+
+<div class="components-view">
+    <div class="components-header">
+        <div class="breadcrumb">
+            <a href="/"><i class="fas fa-home"></i> Strona główna</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Komponenty</span>
+        </div>
+    </div>
+
+    <div class="components-content">
+        <div class="components-intro">
+            <h1><i class="fas fa-puzzle-piece"></i> Biblioteka komponentów MJML</h1>
+            <p>Poznaj wszystkie dostępne komponenty i ich właściwości. Każdy komponent jest zaprojektowany aby działać z konfiguracją brandową <strong><%= config.store_name %></strong>.</p>
+        </div>
+
+        <div class="components-grid">
+            <% components.forEach((component, index) => { %>
+            <div class="component-card">
+                <div class="component-header">
+                    <div class="component-title">
+                        <h3><code>&lt;<%= component.name %>&gt;</code></h3>
+                        <span class="category-badge <%= component.category.toLowerCase() %>"><%= component.category %></span>
+                    </div>
+                    <p class="component-description"><%= component.description %></p>
+                </div>
+
+                <div class="component-example">
+                    <div class="example-tabs">
+                        <button class="example-tab" data-target="code-<%= index %>">TypeScript</button>
+                        <button class="example-tab" data-target="mjml-<%= index %>">MJML</button>
+                        <button class="example-tab active" data-target="preview-<%= index %>">Podgląd HTML</button>
+                    </div>
+
+                    <div class="example-content">
+                        <div id="code-<%= index %>" class="example-pane">
+                            <pre><code class="language-javascript"><%= component.example.code %></code></pre>
+                        </div>
+                        <div id="mjml-<%= index %>" class="example-pane">
+                            <pre><code class="language-xml"><%= component.example.mjml %></code></pre>
+                        </div>
+                        <div id="preview-<%= index %>" class="example-pane active">
+                            <div class="component-preview">
+                                <% 
+                                // Components that need more height due to images or complex layout
+                                const componentsWithImages = ['Image', 'OneProduct', 'ProductGrid', 'CartSummary', 'ImageGallery', 'PricingTable', 'ThreeCardsRow', 'OneProductLeft', 'FourCardsRow'];
+                                const needsMoreHeight = componentsWithImages.includes(component.name);
+                                const iframeHeight = needsMoreHeight ? '600px' : '300px';
+                                %>
+                                <iframe 
+                                    src="/component-preview/<%= component.name %>"
+                                    frameborder="0"
+                                    style="width: 100%; height: <%= iframeHeight %>; border: none;"
+                                    loading="lazy"
+                                ></iframe>
+                            </div>
+                            <div class="preview-actions">
+                                <a href="/component-preview/<%= component.name %>" target="_blank" class="btn btn-sm">
+                                    <i class="fas fa-external-link-alt"></i> Pełny podgląd
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-props">
+                    <h4>Dostępne właściwości:</h4>
+                    <div class="props-list">
+                        <% component.example.props.forEach(prop => { %>
+                        <span class="prop-badge"><%= prop %></span>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+
+        <div class="components-footer">
+            <div class="usage-example">
+                <h2><i class="fas fa-lightbulb"></i> Przykład użycia w kodzie</h2>
+                <div class="code-example">
+                    <pre><code class="language-javascript">// Import komponentów
+import { Button, Text, Section, Column } from '../src';
+
+// Tworzenie komponentu
+const button = new Button({
+  href: 'https://example.com',
+  backgroundColor: '#000000',
+  color: '#ffffff',
+  children: 'Kliknij tutaj'
+});
+
+// Generowanie MJML
+const mjmlOutput = button.render();
+console.log(mjmlOutput);
+// Output: &lt;mj-button href="https://example.com" background-color="#000000" color="#ffffff"&gt;Kliknij tutaj&lt;/mj-button&gt;</code></pre>
+                </div>
+            </div>
+
+            <div class="style-guide">
+                <h2><i class="fas fa-palette"></i> Przewodnik stylizacji</h2>
+                <div class="style-grid">
+                    <div class="style-item">
+                        <h4>Kolory brandowe</h4>
+                        <div class="color-swatches">
+                            <div class="swatch" style="background: <%= config.button_color %>">
+                                <span><%= config.button_color %></span>
+                            </div>
+                            <div class="swatch" style="background: <%= config.background_color %>">
+                                <span><%= config.background_color %></span>
+                            </div>
+                            <div class="swatch" style="background: <%= config.text_color %>">
+                                <span><%= config.text_color %></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="style-item">
+                        <h4>Typografia</h4>
+                        <div class="typography-sample">
+                            <div style="font-size: 32px; font-weight: bold; color: <%= config.text_color %>">Heading H1</div>
+                            <div style="font-size: 24px; font-weight: bold; color: <%= config.text_color %>">Heading H2</div>
+                            <div style="font-size: 16px; line-height: 24px; color: <%= config.text_color %>">Body text example</div>
+                        </div>
+                    </div>
+
+                    <div class="style-item">
+                        <h4>Standardowe marginesy</h4>
+                        <div class="spacing-guide">
+                            <div><code>padding: 40px 30px</code> - Sekcje główne</div>
+                            <div><code>padding: 20px 0</code> - Elementy tekstowe</div>
+                            <div><code>padding: 15px 30px</code> - Przyciski</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Component tabs functionality
+document.querySelectorAll('.example-tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+        const targetId = this.dataset.target;
+        const container = this.closest('.component-example');
+        
+        // Remove active class from all tabs and panes in this container
+        container.querySelectorAll('.example-tab').forEach(t => t.classList.remove('active'));
+        container.querySelectorAll('.example-pane').forEach(p => p.classList.remove('active'));
+        
+        // Add active class to clicked tab and target pane
+        this.classList.add('active');
+        document.getElementById(targetId).classList.add('active');
+    });
+});
+</script>

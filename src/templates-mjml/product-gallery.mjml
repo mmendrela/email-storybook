@@ -1,0 +1,416 @@
+<mjml>
+  <mj-head>
+    <mj-title>Kompletna Kolekcja Lato 2024</mj-title>
+    <mj-preview>Kompletna Kolekcja Lato 2024 - wszystkie produkty w jednym miejscu. Znajdź swój idealny look!</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#f8fafc">
+    <mj-container max-width="600px">
+      
+      <!-- Hero Section -->
+      <mj-section background-color="#1f2937" padding="50px 30px">
+        <mj-column>
+          <mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#ffffff"
+            align="center"
+            padding="0 0 20px 0"
+            line-height="44px"
+          >
+            Kompletna Kolekcja
+          </mj-text>
+          <mj-text 
+            font-size="20px"
+            color="#d1d5db"
+            align="center"
+            padding="0 0 15px 0"
+            line-height="28px"
+          >
+            Lato 2024
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#9ca3af"
+            align="center"
+            line-height="24px"
+          >
+            Cześć! Poznaj wszystkie produkty z naszej najnowszej kolekcji.<br/>
+            Każdy element został starannie dobrany z myślą o Tobie.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Gallery Title -->
+      <mj-section background-color="#ffffff" padding="30px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="26px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 10px 0"
+          >
+            🌟 Wszystkie produkty kolekcji 🌟
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Product Grid - Row 1 -->
+      <mj-section background-color="#ffffff" padding="0 30px 20px">
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink"
+            width="220px"
+            border-radius="8px"
+            align="center"
+            padding="0 10px 15px 0"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px 0"
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 10px 15px 0"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 12px; margin-right: 6px;">249 zł</span>
+            199 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            padding="8px 16px"
+            border-radius="6px"
+            width="160px"
+          >
+            Zobacz szczegóły
+          </mj-button>
+        </mj-column>
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Lovaria Hat – black ribbon"
+            width="220px"
+            border-radius="8px"
+            align="center"
+            padding="0 0 15px 10px"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 10px"
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 10px"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 12px; margin-right: 6px;">179 zł</span>
+            149 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            padding="8px 16px"
+            border-radius="6px"
+            width="160px"
+          >
+            Zobacz szczegóły
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Product Grid - Row 2 -->
+      <mj-section background-color="#ffffff" padding="0 30px 20px">
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+            alt="Lovaria Hat – lace ribbon"
+            width="220px"
+            border-radius="8px"
+            align="center"
+            padding="0 10px 15px 0"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px 0"
+          >
+            Lovaria Hat – lace ribbon
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 10px 15px 0"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 12px; margin-right: 6px;">189 zł</span>
+            159 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            padding="8px 16px"
+            border-radius="6px"
+            width="160px"
+          >
+            Zobacz szczegóły
+          </mj-button>
+        </mj-column>
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85632-small_default/dlugi-welniany-kardigan-maison-coralwhite.jpg"
+            alt="Długi wełniany kardigan MAISON coral/white"
+            width="220px"
+            border-radius="8px"
+            align="center"
+            padding="0 0 15px 10px"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 10px"
+          >
+            Długi wełniany kardigan MAISON coral/white
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 10px"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 12px; margin-right: 6px;">259 zł</span>
+            209 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/kardigany/604687-dlugi-welniany-kardigan-maison-coralwhite.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            padding="8px 16px"
+            border-radius="6px"
+            width="160px"
+          >
+            Zobacz szczegóły
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Product Grid - Row 3 -->
+      <mj-section background-color="#ffffff" padding="0 30px 30px">
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink (Biała wersja)"
+            width="220px"
+            border-radius="8px"
+            align="center"
+            padding="0 10px 15px 0"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px 0"
+          >
+            Top Rieti Pink (Biała wersja)
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 10px 15px 0"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 12px; margin-right: 6px;">179 zł</span>
+            149 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=product-gallery&variant=white"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            padding="8px 16px"
+            border-radius="6px"
+            width="160px"
+          >
+            Zobacz szczegóły
+          </mj-button>
+        </mj-column>
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Lovaria Hat – black ribbon (Limited Edition)"
+            width="220px"
+            border-radius="8px"
+            align="center"
+            padding="0 0 15px 10px"
+          />
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 10px"
+          >
+            Lovaria Hat – black ribbon (Limited Edition)
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 10px"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 12px; margin-right: 6px;">199 zł</span>
+            169 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery&variant=limited"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            padding="8px 16px"
+            border-radius="6px"
+            width="160px"
+          >
+            Zobacz szczegóły
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Collection Highlights -->
+      <mj-section background-color="#f3f4f6" padding="40px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            ✨ Dlaczego pokochasz naszą kolekcję?
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section background-color="#f3f4f6" padding="0 30px 40px">
+        <mj-column width="50%">
+          <mj-text 
+            font-size="16px"
+            color="#374151"
+            padding="0 15px 20px 0"
+            line-height="24px"
+          >
+            <strong>🎨 Unikalne wzory</strong><br/>
+            Każdy element został zaprojektowany z dbałością o szczegóły
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#374151"
+            padding="0 15px 0 0"
+            line-height="24px"
+          >
+            <strong>🌱 Ekologiczne materiały</strong><br/>
+            Dbamy o środowisko wybierając najlepsze materiały
+          </mj-text>
+        </mj-column>
+        <mj-column width="50%">
+          <mj-text 
+            font-size="16px"
+            color="#374151"
+            padding="0 0 20px 15px"
+            line-height="24px"
+          >
+            <strong>👗 Uniwersalny styl</strong><br/>
+            Produkty pasują do różnych okazji i stylizacji
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#374151"
+            padding="0 0 0 15px"
+            line-height="24px"
+          >
+            <strong>💎 Najwyższa jakość</strong><br/>
+            Testowane przez setki zadowolonych klientek
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Final CTA -->
+      <mj-section background-color="#059669" padding="45px 30px">
+        <mj-column>
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#ffffff"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            Gotowa na shopping?
+          </mj-text>
+          <mj-text 
+            font-size="18px"
+            color="#d1fae5"
+            align="center"
+            padding="0 0 30px 0"
+            line-height="26px"
+          >
+            Wszystkie produkty czekają w naszym sklepie online.<br/>
+            Dostawa gratis przy zamówieniu powyżej 150 zł!
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#ffffff"
+            color="#059669"
+            font-size="20px"
+            font-weight="bold"
+            padding="18px 36px"
+            border-radius="8px"
+          >
+            🛍️ Odkryj całą kolekcję
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>

@@ -1,0 +1,234 @@
+<!-- FourCardsRow.mjml - Cztery karty produktów w rzędzie z opcjonalnym trybem kompaktowym -->
+<mj-section background-color="#ffffff" padding="40px 30px 20px">
+  <mj-column>
+    <mj-text 
+      font-size="28px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 20px 0"
+    >
+      Kolekcja letnia 2024
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+<!-- First row: 2 products -->
+<mj-section background-color="#ffffff" padding="20px 15px 20px">
+  <mj-column width="50%" padding="0 15px">
+    <mj-image 
+      src="https://www.soitalian.pl/img/logo-1643198138.jpg"
+      alt="Top Rieti Pink"
+      width="180px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      line-height="24px"
+      height="50px"
+    >
+      Top Rieti Pink
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="35px"
+    >
+      Elegancki różowy top
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      <span style="text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;">249 zł</span>
+      199 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/top-rieti-pink"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="16px"
+      font-weight="bold"
+      padding="14px 28px"
+      border-radius="6px"
+      width="180px"
+    >
+      Zobacz
+    </mj-button>
+  </mj-column>
+  
+  <mj-column width="50%" padding="0 15px">
+    <mj-image 
+      src="https://www.soitalian.pl/img/kapelusz-lovaria-1643198183.jpg"
+      alt="Kapelusz Lovaria"
+      width="180px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      line-height="24px"
+      height="50px"
+    >
+      Kapelusz Lovaria
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="35px"
+    >
+      Kapelusz z czarną wstążką
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      149 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/kapelusz-lovaria"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="16px"
+      font-weight="bold"
+      padding="14px 28px"
+      border-radius="6px"
+      width="180px"
+    >
+      Zobacz
+    </mj-button>
+  </mj-column>
+</mj-section>
+
+<!-- Second row: 2 products -->
+<mj-section background-color="#ffffff" padding="20px 15px 40px">
+  <mj-column width="50%" padding="0 15px">
+    <mj-image 
+      src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+      alt="Kapelusz Lovaria z ażurową wstążką"
+      width="180px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      line-height="24px"
+      height="50px"
+    >
+      Kapelusz z ażurową wstążką
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="35px"
+    >
+      Kapelusz z ażurową wstążką
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      159 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/kapelusz-lovaria-azur"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="16px"
+      font-weight="bold"
+      padding="14px 28px"
+      border-radius="6px"
+      width="180px"
+    >
+      Zobacz
+    </mj-button>
+  </mj-column>
+  
+  <mj-column width="50%" padding="0 15px">
+    <mj-image 
+      src="https://www.soitalian.pl/img/logo-1643198138.jpg"
+      alt="Top Rieti Pink (edycja limitowana)"
+      width="180px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      line-height="24px"
+      height="50px"
+    >
+      Top Rieti Pink (limitowana)
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="35px"
+    >
+      Limitowana edycja różowego topu
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      <span style="text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;">279 zł</span>
+      229 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/top-rieti-pink"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="16px"
+      font-weight="bold"
+      padding="14px 28px"
+      border-radius="6px"
+      width="180px"
+    >
+      Zobacz
+    </mj-button>
+  </mj-column>
+</mj-section>

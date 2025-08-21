@@ -1,0 +1,41 @@
+<mjml lang="pl">
+  <mj-head>
+  <mj-title>WYPRZEDAŻ -20% na cały asortyment | Soitalian.pl</mj-title><mj-preview>Nie przegap! Ekskluzywna wyprzedaż -20% na wszystkie produkty włoskie w Soitalian.pl. Oferta ważna tylko do końca tygodnia!</mj-preview>
+</mj-head><mj-body background-color="#f8f9fa" font-family="Arial, sans-serif">
+  <mj-section background-color="#ffffff" padding="20px 0">
+  <mj-column>
+  <mj-image height="auto" width="200px" src="https://soitalian.pl/logo.png" alt="Soitalian.pl - Prawdziwie włoskie produkty" />
+</mj-column>
+</mj-section><mj-wrapper background-color="#ffffff" max-width="600px">
+  <mj-section background-color="#c41e3a" padding="40px 20px">
+  <mj-column>
+  <mj-text color="#ffffff" font-size="28px" font-weight="bold" padding="0 0 15px 0" text-align="center">🇮🇹 WIELKA WYPRZEDAŻ 🇮🇹</mj-text><mj-text color="#ffffff" font-size="72px" font-weight="bold" line-height="1.2" padding="0 0 10px 0" text-align="center">-20%</mj-text><mj-text color="#ffffff" font-size="24px" font-weight="bold" padding="0 0 20px 0" text-align="center">NA CAŁY ASORTYMENT</mj-text><mj-text color="#ffffff" font-size="16px" font-weight="normal" text-align="center">Oferta ważna do 31 sierpnia 2025</mj-text>
+</mj-column>
+</mj-section><mj-section padding="40px 30px 20px">
+  <mj-column>
+  <mj-text color="#2c3e50" font-size="24px" font-weight="bold" padding="0 0 20px 0">Ciao! 👋</mj-text><mj-text color="#555555" font-size="16px" line-height="24px" padding="0 0 20px 0">Mamy dla Ciebie wyjątkową ofertę! Przez ograniczony czas otrzymasz <strong>20% zniżki</strong> na wszystkie nasze autentyczne włoskie produkty.</mj-text><mj-text color="#555555" font-size="16px" line-height="24px" padding="0 0 30px 0">Od prawdziwego parmezanu Parmigiano-Reggiano, przez tradycyjne makaron z Gragnano, po ekskluzywne oliwy z oliwek extra vergine - wszystko w promocyjnej cenie!</mj-text>
+</mj-column>
+</mj-section><mj-section padding="0 30px 40px">
+  <mj-column>
+  <mj-button background-color="#c41e3a" border-radius="30px" color="#ffffff" font-size="18px" font-weight="bold" padding="18px 40px" text-align="center" href="https://soitalian.pl?utm_source=newsletter&utm_medium=email&utm_campaign=wyprzedaz_20">🛒 SKORZYSTAJ Z OFERTY</mj-button><mj-text color="#c41e3a" font-size="14px" font-weight="bold" padding="15px 0 0 0" text-align="center">Kod: <strong>WYPRZEDAZ20</strong></mj-text>
+</mj-column>
+</mj-section><mj-section background-color="#f8f9fa" padding="30px">
+  <mj-column>
+  <mj-text color="#2c3e50" font-size="18px" font-weight="bold" padding="0 0 25px 0" text-align="center">🌟 NASZE BESTSELLERY W PROMOCJI:</mj-text><mj-text color="#555555" font-size="16px" line-height="26px">• Parmigiano-Reggiano DOP 24 miesiące<br>• Prosciutto di Parma DOP<br>• Oliwa Extra Vergine z Toskanii<br>• Pasta Gragnano IGP<br>• Mozzarella di Bufala Campana DOP<br>• Aceto Balsamico di Modena IGP</mj-text>
+</mj-column>
+</mj-section><mj-divider margin="30px 0" /><mj-section padding="20px 30px">
+  <mj-column>
+  <mj-text color="#666666" font-size="14px" line-height="22px" text-align="center">📦 <strong>Darmowa dostawa</strong> przy zamówieniu powyżej 200 zł<br>🚚 <strong>Ekspresowa dostawa</strong> w 24h do głównych miast<br>💯 <strong>Gwarancja świeżości</strong> i autentyczności produktów</mj-text>
+</mj-column>
+</mj-section><mj-section padding="20px 30px 40px">
+  <mj-column>
+  <mj-button background-color="#ffffff" border="2px solid #c41e3a" border-radius="25px" color="#c41e3a" font-size="16px" font-weight="bold" padding="15px 30px" href="https://soitalian.pl/wyprzedaz?utm_source=newsletter&utm_medium=email&utm_campaign=wyprzedaz_20">ZOBACZ WSZYSTKIE PROMOCJE</mj-button>
+</mj-column>
+</mj-section>
+</mj-wrapper><mj-section background-color="#2c3e50" padding="30px 20px">
+  <mj-column>
+  <mj-text color="#ffffff" font-size="18px" font-weight="bold" padding="0 0 15px 0" text-align="center">Soitalian.pl - Prawdziwie włoskie smaki</mj-text><mj-text color="#bdc3c7" font-size="14px" line-height="20px" padding="0 0 20px 0" text-align="center">📧 kontakt@soitalian.pl | 📞 +48 123 456 789<br>📍 ul. Włoska 1, 00-001 Warszawa</mj-text><mj-text color="#95a5a6" font-size="12px" text-align="center">Nie chcesz już otrzymywać naszych wiadomości? <a href="#" style="color: #3498db;">Wypisz się tutaj</a></mj-text>
+</mj-column>
+</mj-section>
+</mj-body>
+</mjml>

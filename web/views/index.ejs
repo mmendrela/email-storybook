@@ -1,0 +1,127 @@
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1><i class="fas fa-envelope-open"></i> MJML Email Storybook</h1>
+        <p>Interaktywny interfejs do podglądu i generowania szablonów email dla <strong><%= config.store_name %></strong></p>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number"><%= templates.length %></div>
+                <div class="stat-label">Szablonów</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">3</div>
+                <div class="stat-label">Produktów</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Możliwości</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="templates-section">
+    <div class="section-header">
+        <h2><i class="fas fa-template"></i> Dostępne szablony email</h2>
+        <p>Wybierz szablon aby zobaczyć podgląd i dostosować parametry</p>
+    </div>
+
+    <div class="templates-grid">
+        <% templates.forEach(template => { %>
+        <div class="template-card">
+            <div class="template-header">
+                <div class="template-category <%= template.category.toLowerCase() %>">
+                    <%= template.category %>
+                </div>
+                <h3><%= template.name %></h3>
+            </div>
+            
+            <div class="template-body">
+                <p class="template-description">
+                    <%= template.description %>
+                </p>
+                
+                <div class="template-params">
+                    <strong>Parametry:</strong>
+                    <div class="params-list">
+                        <% template.params.forEach(param => { %>
+                        <span class="param-badge"><%= param.label %></span>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="template-actions">
+                <a href="/template/<%= template.id %>" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> Podgląd
+                </a>
+                <a href="/preview/<%= template.id %>" target="_blank" class="btn btn-secondary">
+                    <i class="fas fa-external-link-alt"></i> Pełny podgląd
+                </a>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<div class="brand-section">
+    <div class="section-header">
+        <h2><i class="fas fa-palette"></i> Konfiguracja brandingu</h2>
+        <p>Aktualnie używane ustawienia dla <%= config.store_name %></p>
+    </div>
+
+    <div class="brand-config">
+        <div class="config-group">
+            <h3>Podstawowe informacje</h3>
+            <div class="config-item">
+                <label>Nazwa sklepu:</label>
+                <span><%= config.store_name %></span>
+            </div>
+            <div class="config-item">
+                <label>URL sklepu:</label>
+                <span><%= config.store_url %></span>
+            </div>
+            <div class="config-item">
+                <label>Logo:</label>
+                <img src="<%= config.logo_url %>" alt="<%= config.store_name %>" class="logo-preview">
+            </div>
+        </div>
+
+        <div class="config-group">
+            <h3>Kolory brandowe</h3>
+            <div class="color-palette">
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: <%= config.background_color %>"></div>
+                    <span>Tło: <%= config.background_color %></span>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: <%= config.button_color %>"></div>
+                    <span>Przyciski: <%= config.button_color %></span>
+                </div>
+                <div class="color-item">
+                    <div class="color-swatch" style="background-color: <%= config.text_color %>"></div>
+                    <span>Tekst: <%= config.text_color %></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="config-group">
+            <h3>Produkty w kolekcji</h3>
+            <div class="products-showcase">
+                <div class="product-item">
+                    <img src="<%= config.product_1_image %>" alt="<%= config.product_1_name %>">
+                    <span><%= config.product_1_name %></span>
+                </div>
+                <div class="product-item">
+                    <img src="<%= config.product_2_image %>" alt="<%= config.product_2_name %>">
+                    <span><%= config.product_2_name %></span>
+                </div>
+                <div class="product-item">
+                    <img src="<%= config.product_3_image %>" alt="<%= config.product_3_name %>">
+                    <span><%= config.product_3_name %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

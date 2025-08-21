@@ -1,0 +1,8 @@
+<mj-head>
+  <mj-title>Tytuł emaila</mj-title>
+  <mj-preview>Tekst podglądu emaila...</mj-preview>
+  <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  <mj-style>
+    /* Dodatkowe style CSS */
+  </mj-style>
+</mj-head>

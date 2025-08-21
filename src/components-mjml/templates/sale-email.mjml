@@ -1,0 +1,343 @@
+<mjml lang="pl">
+  <mj-head>
+    <mj-title>WEEKEND SALE -30% na cały asortyment | SoItalian</mj-title>
+    <mj-preview>Pospiesz się! Ekskluzywna wyprzedaż -30% na wszystkie produkty włoskie w SoItalian.pl. Zostały tylko 2 dni!</mj-preview>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-style>
+      .urgency-banner { 
+        background-color: #ff6b6b !important;
+        color: #ffffff !important;
+      }
+      .promo-code {
+        border: 2px dashed #000000 !important;
+        border-radius: 8px !important;
+      }
+      .product-card {
+        transition: transform 0.2s !important;
+      }
+      .product-card:hover {
+        transform: translateY(-2px) !important;
+      }
+    </mj-style>
+  </mj-head>
+  
+  <mj-body background-color="#f7f4f2" font-family="Inter, Arial, sans-serif">
+    
+    <!-- Header z logo -->
+    <mj-section background-color="#ffffff" padding="20px 0">
+      <mj-column>
+        <mj-image 
+          src="https://www.soitalian.pl/img/logo-1643198138.jpg" 
+          alt="SoItalian" 
+          width="180px" 
+          height="auto"
+        />
+      </mj-column>
+    </mj-section>
+    
+    <!-- Główny kontener -->
+    <mj-wrapper max-width="600px" background-color="#ffffff">
+      
+      <!-- Hero sekcja z rabatem -->
+      <mj-section background-color="#000000" padding="50px 20px">
+        <mj-column>
+          <mj-text 
+            color="#ffffff" 
+            font-size="28px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 20px 0"
+          >
+            WEEKEND SALE
+          </mj-text>
+          <mj-text 
+            color="#ffffff" 
+            font-size="72px" 
+            font-weight="bold" 
+            text-align="center" 
+            line-height="1.1" 
+            padding="0 0 15px 0"
+          >
+            -30%
+          </mj-text>
+          <mj-text 
+            color="#ffffff" 
+            font-size="22px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 25px 0"
+          >
+            NA CAŁĄ KOLEKCJĘ
+          </mj-text>
+          <mj-text 
+            color="#ffffff" 
+            font-size="16px" 
+            text-align="center" 
+            font-weight="normal"
+          >
+            Oferta ważna do niedzieli 24.08
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Banner pilności -->
+      <mj-section css-class="urgency-banner" padding="20px 30px">
+        <mj-column>
+          <mj-text 
+            color="#ffffff" 
+            font-size="16px" 
+            font-weight="bold" 
+            text-align="center"
+          >
+            ⏰ Zostały tylko 2 dni!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Główna wiadomość -->
+      <mj-section padding="40px 30px 20px">
+        <mj-column>
+          <mj-text 
+            color="#333333" 
+            font-size="24px" 
+            font-weight="bold" 
+            padding="0 0 20px 0"
+          >
+            Bella! 👗✨
+          </mj-text>
+          <mj-text 
+            color="#333333" 
+            font-size="16px" 
+            line-height="24px" 
+            padding="0 0 20px 0"
+          >
+            Przygotowaliśmy dla Ciebie wyjątkową okazję! Teraz możesz zaoszczędzić aż <strong>30% na wszystkich naszych włoskich topach i akcesoriach</strong>.
+          </mj-text>
+          <mj-text 
+            color="#333333" 
+            font-size="16px" 
+            line-height="24px" 
+            padding="0 0 30px 0" 
+            font-style="italic"
+          >
+            Tops and accessories for summer – feminine, light, and fashionable.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Kod promocyjny -->
+      <mj-section background-color="#f7f4f2" padding="30px 20px">
+        <mj-column>
+          <mj-text 
+            color="#333333" 
+            font-size="14px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 10px 0"
+          >
+            TWÓJ KOD ZNIŻKOWY
+          </mj-text>
+          <mj-text 
+            css-class="promo-code"
+            color="#000000" 
+            font-size="28px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="15px"
+          >
+            WEEKEND30
+          </mj-text>
+          <mj-text 
+            color="#666666" 
+            font-size="12px" 
+            text-align="center" 
+            padding="10px 0 0 0"
+          >
+            Zniżka 30% na wszystko
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Przycisk CTA -->
+      <mj-section padding="40px 30px">
+        <mj-column>
+          <mj-button 
+            href="https://www.soitalian.pl/?utm_source=sale_email&utm_medium=email&utm_campaign=sale_30&code=WEEKEND30"
+            background-color="#000000" 
+            color="#ffffff" 
+            font-size="18px" 
+            font-weight="bold" 
+            padding="18px 40px" 
+            border-radius="6px"
+          >
+            🛍️ SKORZYSTAJ Z OFERTY
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Produkty w promocji -->
+      <mj-section background-color="#f7f4f2" padding="40px 20px 20px">
+        <mj-column>
+          <mj-text 
+            color="#333333" 
+            font-size="20px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 30px 0"
+          >
+            💎 WYBRANE PRODUKTY W PROMOCJI
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Prezentacja produktów -->
+      <mj-section background-color="#f7f4f2" padding="0 20px 40px">
+        <mj-column width="50%" css-class="product-card">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg" 
+            alt="Top Rieti Pink" 
+            width="200px" 
+            height="auto"
+          />
+          <mj-text 
+            color="#333333" 
+            font-size="16px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="15px 10px 5px"
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            color="#ff6b6b" 
+            font-size="14px" 
+            font-weight="bold" 
+            text-align="center"
+          >
+            Teraz -30%!
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=sale_email&utm_medium=email"
+            background-color="transparent" 
+            color="#000000" 
+            font-size="14px" 
+            font-weight="bold" 
+            padding="10px 20px" 
+            border="1px solid #000000" 
+            border-radius="4px"
+          >
+            Zobacz
+          </mj-button>
+        </mj-column>
+        <mj-column width="50%" css-class="product-card">
+          <mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg" 
+            alt="Lovaria Hat – black ribbon" 
+            width="200px" 
+            height="auto"
+          />
+          <mj-text 
+            color="#333333" 
+            font-size="16px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="15px 10px 5px"
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+          <mj-text 
+            color="#ff6b6b" 
+            font-size="14px" 
+            font-weight="bold" 
+            text-align="center"
+          >
+            Teraz -30%!
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=sale_email&utm_medium=email"
+            background-color="transparent" 
+            color="#000000" 
+            font-size="14px" 
+            font-weight="bold" 
+            padding="10px 20px" 
+            border="1px solid #000000" 
+            border-radius="4px"
+          >
+            Zobacz
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Separator -->
+      <mj-divider border-color="#e0e0e0" width="80%" padding="30px 0" />
+      
+      <!-- Korzyści -->
+      <mj-section padding="20px 30px">
+        <mj-column>
+          <mj-text 
+            color="#666666" 
+            font-size="14px" 
+            line-height="22px" 
+            text-align="center"
+          >
+            ✨ <strong>Darmowa dostawa</strong> przy zamówieniu powyżej 200 zł<br>
+            🚚 <strong>Szybka realizacja</strong> zamówień w 1-2 dni<br>
+            💝 <strong>Możliwość zwrotu</strong> w ciągu 14 dni
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Drugi CTA -->
+      <mj-section padding="20px 30px 40px">
+        <mj-column>
+          <mj-button 
+            href="https://www.soitalian.pl/sale?utm_source=sale_email&utm_medium=email"
+            background-color="transparent" 
+            color="#000000" 
+            font-size="16px" 
+            font-weight="bold" 
+            padding="15px 30px" 
+            border="2px solid #000000" 
+            border-radius="6px"
+          >
+            ZOBACZ WSZYSTKIE PROMOCJE
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      
+    </mj-wrapper>
+    
+    <!-- Footer -->
+    <mj-section background-color="#000000" padding="30px 20px">
+      <mj-column>
+        <mj-text 
+          color="#ffffff" 
+          font-size="18px" 
+          font-weight="bold" 
+          text-align="center" 
+          padding="0 0 15px 0"
+        >
+          SoItalian - Włoski styl na co dzień
+        </mj-text>
+        <mj-text 
+          color="#cccccc" 
+          font-size="14px" 
+          line-height="20px" 
+          text-align="center" 
+          padding="0 0 20px 0"
+        >
+          📧 sklep@soitalian.pl | 📞 +48 577 555 555<br>
+          📍 ul. Przykładowa 1, Warsaw
+        </mj-text>
+        <mj-text 
+          color="#999999" 
+          font-size="12px" 
+          text-align="center"
+        >
+          Nie chcesz już otrzymywać naszych wiadomości? <a href="#" style="color: #999999;">Wypisz się tutaj</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+  </mj-body>
+</mjml>

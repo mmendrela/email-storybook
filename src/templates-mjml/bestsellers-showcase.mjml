@@ -1,0 +1,252 @@
+<mjml>
+  <mj-head>
+    <mj-title>Nasze bestsellery czekają!</mj-title>
+    <mj-preview>Ostatnie sztuki! Sprawdź nasze najpopularniejsze produkty z kodem BESTSELLER15. Ważne do 31 sierpnia 2024.</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#f8fafc">
+    <mj-container max-width="600px">
+      
+      <!-- Urgency Header -->
+      <mj-section background-color="#f59e0b" padding="20px 30px">
+        <mj-column>
+          <mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#ffffff"
+            align="center"
+            padding="0"
+          >
+            🔥 Ostatnie sztuki! • Kod: BESTSELLER15 • Do 31 sierpnia 2024
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Welcome Message -->
+      <mj-section background-color="#ffffff" padding="40px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            Cześć! 👋
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            align="center"
+            line-height="24px"
+          >
+            Te produkty pokochały setki naszych klientek. Teraz Ty też możesz je odkryć z ekskluzywną zniżką!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Three Cards Row - Bestsellers -->
+      <mj-section background-color="#ffffff" padding="20px 30px 10px">
+        <mj-column>
+          <mj-text 
+            font-size="26px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 30px 0"
+          >
+            ⭐ Nasze Bestsellery ⭐
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- First Row: 2 Products -->
+      <mj-section background-color="#ffffff" padding="0 30px 20px">
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink"
+            width="250px"
+            border-radius="8px"
+            align="center"
+            padding="0 10px 15px 0"
+          />
+          <mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px 0"
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 10px 0"
+            line-height="20px"
+          >
+            Nasz absolutny bestseller!
+          </mj-text>
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 10px 15px 0"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-right: 8px;">199 zł</span>
+            169 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=bestsellers"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 20px"
+            border-radius="6px"
+            width="200px"
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+        <mj-column width="50%">
+          <mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Kapelusz Lovaria"
+            width="250px"
+            border-radius="8px"
+            align="center"
+            padding="0 0 15px 10px"
+          />
+          <mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 10px"
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 10px 10px"
+            line-height="20px"
+          >
+            Idealny na każdą okazję
+          </mj-text>
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 10px"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-right: 8px;">149 zł</span>
+            127 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=bestsellers"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 20px"
+            border-radius="6px"
+            width="200px"
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Third Product - Centered -->
+      <mj-section background-color="#ffffff" padding="0 30px 30px">
+        <mj-column width="100%">
+          <mj-image 
+            src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+            alt="Kapelusz z ażurową wstążką"
+            width="250px"
+            border-radius="8px"
+            align="center"
+            padding="0 0 15px 0"
+          />
+          <mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 8px 0"
+          >
+            Lovaria Hat – lace ribbon
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 10px 0"
+            line-height="20px"
+          >
+            Subtelna elegancja
+          </mj-text>
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#059669"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 14px; margin-right: 8px;">159 zł</span>
+            135 zł
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=bestsellers"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 20px"
+            border-radius="6px"
+            width="200px"
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- CTA Section -->
+      <mj-section background-color="#1f2937" padding="40px 30px">
+        <mj-column>
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#ffffff"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            Nie zwlekaj! Oferta ważna tylko do 31 sierpnia 2024
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl?utm_source=newsletter&utm_campaign=bestsellers&code=BESTSELLER15"
+            background-color="#f59e0b"
+            color="#000000"
+            font-size="18px"
+            font-weight="bold"
+            padding="16px 32px"
+            border-radius="8px"
+          >
+            🛍️ Zobacz wszystkie bestsellery
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>

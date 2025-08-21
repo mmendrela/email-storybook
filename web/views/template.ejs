@@ -1,0 +1,151 @@
+
+<div class="template-view">
+    <div class="template-header-bar">
+        <div class="breadcrumb">
+            <a href="/"><i class="fas fa-home"></i> Strona główna</a>
+            <i class="fas fa-chevron-right"></i>
+            <span><%= template.name %></span>
+        </div>
+        
+        <div class="template-meta">
+            <span class="category-badge <%= template.category.toLowerCase() %>">
+                <%= template.category %>
+            </span>
+        </div>
+    </div>
+
+    <div class="template-content">
+        <div class="template-info">
+            <h1><%= template.name %></h1>
+            <p class="template-description"><%= template.description %></p>
+        </div>
+
+        <div class="template-workspace">
+            <!-- Parameters Panel -->
+            <div class="params-panel">
+                <h3><i class="fas fa-sliders-h"></i> Parametry szablonu</h3>
+                
+                <form id="template-form" class="params-form">
+                    <% template.params.forEach(param => { %>
+                    <div class="form-group">
+                        <label for="<%= param.name %>"><%= param.label %></label>
+                        <% if (param.type === 'number') { %>
+                        <input 
+                            type="number" 
+                            id="<%= param.name %>" 
+                            name="<%= param.name %>" 
+                            value="<%= param.default %>"
+                            class="form-control"
+                        >
+                        <% } else { %>
+                        <input 
+                            type="text" 
+                            id="<%= param.name %>" 
+                            name="<%= param.name %>" 
+                            value="<%= param.default %>"
+                            class="form-control"
+                        >
+                        <% } %>
+                    </div>
+                    <% }); %>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-sync"></i> Wygeneruj ponownie
+                        </button>
+                        <button type="button" id="reset-btn" class="btn btn-secondary">
+                            <i class="fas fa-undo"></i> Reset
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Preview Panel -->
+            <div class="preview-panel">
+                <div class="preview-tabs">
+                    <button class="tab-btn active" data-tab="preview">
+                        <i class="fas fa-eye"></i> Podgląd
+                    </button>
+                    <button class="tab-btn" data-tab="mjml">
+                        <i class="fas fa-code"></i> MJML
+                    </button>
+                    <button class="tab-btn" data-tab="html">
+                        <i class="fas fa-file-code"></i> HTML
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Preview Tab -->
+                    <div class="tab-pane active" id="preview-tab">
+                        <div class="preview-toolbar">
+                            <div class="device-selector">
+                                <button class="device-btn active" data-width="100%">
+                                    <i class="fas fa-desktop"></i> Desktop
+                                </button>
+                                <button class="device-btn" data-width="768px">
+                                    <i class="fas fa-tablet-alt"></i> Tablet
+                                </button>
+                                <button class="device-btn" data-width="375px">
+                                    <i class="fas fa-mobile-alt"></i> Mobile
+                                </button>
+                            </div>
+                            <button id="refresh-preview" class="btn btn-sm">
+                                <i class="fas fa-refresh"></i>
+                            </button>
+                            <a href="/preview/<%= template.id %>" target="_blank" class="btn btn-sm">
+                                <i class="fas fa-external-link-alt"></i> Pełny ekran
+                            </a>
+                        </div>
+                        
+                        <div class="preview-container">
+                            <iframe 
+                                id="email-preview" 
+                                src="/preview/<%= template.id %>"
+                                frameborder="0"
+                                style="width: 100%; min-height: 600px;"
+                            ></iframe>
+                        </div>
+                    </div>
+
+                    <!-- MJML Tab -->
+                    <div class="tab-pane" id="mjml-tab">
+                        <div class="code-toolbar">
+                            <button id="copy-mjml" class="btn btn-sm">
+                                <i class="fas fa-copy"></i> Kopiuj
+                            </button>
+                            <button id="download-mjml" class="btn btn-sm">
+                                <i class="fas fa-download"></i> Pobierz .mjml
+                            </button>
+                        </div>
+                        <div class="code-container">
+                            <pre><code id="mjml-code" class="language-xml"><%= mjmlCode %></code></pre>
+                        </div>
+                    </div>
+
+                    <!-- HTML Tab -->
+                    <div class="tab-pane" id="html-tab">
+                        <div class="code-toolbar">
+                            <button id="copy-html" class="btn btn-sm">
+                                <i class="fas fa-copy"></i> Kopiuj
+                            </button>
+                            <button id="download-html" class="btn btn-sm">
+                                <i class="fas fa-download"></i> Pobierz .html
+                            </button>
+                        </div>
+                        <div class="code-container">
+                            <pre><code id="html-code" class="language-html"><%= htmlCode %></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Store template data for JavaScript
+    window.templateData = {
+        id: '<%= template.id %>',
+        name: '<%= template.name %>'
+    };
+</script>

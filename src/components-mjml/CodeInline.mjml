@@ -1,0 +1,9 @@
+<mj-text>
+  <style>
+    .cino { display: none; }
+    .cio { display: inline; }
+    [data-ogsc] .cino { display: inline; }
+    [data-ogsc] .cio { display: none; }
+  </style>
+  Zainstaluj paczkę <code class="cino">npm install @soitalian/fashion</code><span class="cio" style="background-color: #f1f5f9; color: #c41e3a; padding: 2px 6px; border-radius: 4px; font-family: Monaco, Consolas, monospace;">npm install @soitalian/fashion</span> aby rozpocząć.
+</mj-text>

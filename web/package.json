@@ -1,0 +1,20 @@
+{
+  "name": "mjml-email-storybook",
+  "version": "1.0.0",
+  "description": "Web interface for MJML email components",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0",
+    "mjml": "^4.15.0",
+    "ejs": "^3.1.9",
+    "express-ejs-layouts": "^2.5.1",
+    "highlight.js": "^11.9.0"
+  },
+  "keywords": ["mjml", "email", "storybook", "components"],
+  "author": "",
+  "license": "MIT"
+}

@@ -1,0 +1,177 @@
+<!-- ThreeCardsRow.mjml - Trzy karty produktów w rzędzie z tytułem -->
+<mj-section background-color="#ffffff" padding="40px 30px 20px">
+  <mj-column>
+    <mj-text 
+      font-size="28px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 20px 0"
+    >
+      Nasze bestsellery
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+<mj-section background-color="#ffffff" padding="20px 15px 40px">
+  <mj-column width="33.33%" padding="0 10px">
+    <mj-image 
+      src="https://www.soitalian.pl/img/logo-1643198138.jpg"
+      alt="Top Rieti Pink"
+      width="160px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      height="50px"
+      line-height="22px"
+    >
+      Top Rieti Pink
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="40px"
+    >
+      Elegancki top w różowym kolorze
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      <span style="text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;">249 zł</span>
+      199 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/top-rieti-pink"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+      width="140px"
+    >
+      Zobacz więcej
+    </mj-button>
+  </mj-column>
+  
+  <mj-column width="33.33%" padding="0 10px">
+    <mj-image 
+      src="https://www.soitalian.pl/img/kapelusz-lovaria-1643198183.jpg"
+      alt="Kapelusz Lovaria"
+      width="160px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      height="50px"
+      line-height="22px"
+    >
+      Kapelusz Lovaria
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="40px"
+    >
+      Stylowy kapelusz na każdą okazję
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      149 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/kapelusz-lovaria"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+      width="140px"
+    >
+      Zobacz więcej
+    </mj-button>
+  </mj-column>
+  
+  <mj-column width="33.33%" padding="0 10px">
+    <mj-image 
+      src="https://via.placeholder.com/300x300/f0f0f0/333?text=Sukienka"
+      alt="Sukienka Milano"
+      width="160px"
+      border-radius="8px"
+      padding="0 0 15px 0"
+      align="center"
+    />
+    <mj-text 
+      font-size="18px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 8px 0"
+      height="50px"
+      line-height="22px"
+    >
+      Sukienka Milano
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+      padding="0 0 12px 0"
+      line-height="18px"
+      height="40px"
+    >
+      Letnia sukienka z włoskiego materiału
+    </mj-text>
+    <mj-text 
+      font-size="20px"
+      font-weight="bold"
+      color="#059669"
+      align="center"
+      padding="0 0 15px 0"
+    >
+      <span style="text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;">399 zł</span>
+      299 zł
+    </mj-text>
+    <mj-button 
+      href="https://www.soitalian.pl/products/sukienka-milano"
+      background-color="#1f2937"
+      color="#ffffff"
+      font-size="14px"
+      font-weight="bold"
+      padding="12px 24px"
+      border-radius="6px"
+      width="140px"
+    >
+      Zobacz więcej
+    </mj-button>
+  </mj-column>
+</mj-section>

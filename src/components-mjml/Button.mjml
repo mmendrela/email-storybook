@@ -1,0 +1,11 @@
+<mj-button 
+  href="https://www.soitalian.pl/" 
+  background-color="#000000" 
+  color="#ffffff" 
+  font-size="18px" 
+  font-weight="bold" 
+  padding="18px 40px" 
+  border-radius="6px"
+>
+  🛍️ Zobacz kolekcję
+</mj-button>

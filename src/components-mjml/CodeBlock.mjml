@@ -1,0 +1,12 @@
+<mj-text 
+  background-color="#f7fafc" 
+  color="#2d3748" 
+  padding="16px" 
+  border-radius="8px" 
+  font-family="Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace"
+  font-size="14px"
+  line-height="1.5"
+>
+  <pre style="margin: 0; font-family: inherit;"><code class="language-javascript"> 1  const welcome = "Witaj w SoItalian!";
+ 2  console.log(welcome);</code></pre>
+</mj-text>

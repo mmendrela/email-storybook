@@ -1,0 +1,272 @@
+<mjml lang="pl">
+  <mj-head>
+    <mj-title>Witaj w SoItalian – Twój włoski styl czeka!</mj-title>
+    <mj-preview>Dziękujemy za rejestrację! Odkryj kolekcję włoskiej mody i otrzymaj 10% zniżki na pierwsze zakupy.</mj-preview>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <mj-style>
+      .hero-text { 
+        background-color: rgba(0,0,0,0.3) !important; 
+        border-radius: 10px !important; 
+      }
+      .code-box {
+        border: 2px dashed #ffffff !important;
+        border-radius: 8px !important;
+      }
+    </mj-style>
+  </mj-head>
+  
+  <mj-body background-color="#f7f4f2" font-family="Inter, Arial, sans-serif">
+    
+    <!-- Header z logo -->
+    <mj-section background-color="#ffffff" padding="20px 0">
+      <mj-column>
+        <mj-image 
+          src="https://www.soitalian.pl/img/logo-1643198138.jpg" 
+          alt="SoItalian" 
+          width="180px" 
+          height="auto"
+        />
+      </mj-column>
+    </mj-section>
+    
+    <!-- Główny kontener -->
+    <mj-wrapper max-width="600px" background-color="#ffffff">
+      
+      <!-- Hero sekcja -->
+      <mj-section 
+        background-url="https://www.soitalian.pl/85583-large_default/top-rieti-pink.jpg"
+        background-size="cover"
+        padding="60px 20px"
+      >
+        <mj-column>
+          <mj-text 
+            css-class="hero-text"
+            font-size="32px" 
+            font-weight="bold" 
+            color="#ffffff" 
+            text-align="center" 
+            padding="20px"
+          >
+            Benvenuta! 🌸
+          </mj-text>
+          <mj-text 
+            background-color="rgba(0,0,0,0.5)" 
+            border-radius="8px" 
+            color="#ffffff" 
+            font-size="24px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="10px 20px"
+          >
+            STYLE YOU'LL LOVE
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Wiadomość powitalna -->
+      <mj-section padding="40px 30px">
+        <mj-column>
+          <mj-text 
+            color="#333333" 
+            font-size="20px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 25px 0"
+          >
+            Dziękujemy za dołączenie do rodziny SoItalian! 💚🤍❤️
+          </mj-text>
+          <mj-text 
+            color="#333333" 
+            font-size="16px" 
+            line-height="24px" 
+            text-align="center" 
+            padding="0 0 30px 0"
+          >
+            Tops and accessories for summer – feminine, light, and fashionable.
+          </mj-text>
+          <mj-text 
+            color="#333333" 
+            font-size="16px" 
+            line-height="24px" 
+            text-align="center" 
+            padding="0 0 30px 0"
+          >
+            Jako powitanie, mamy dla Ciebie <strong>10% zniżki</strong> na pierwsze zakupy! Użyj kodu poniżej i odkryj naszą kolekcję włoskich topów i akcesoriów.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Kod zniżkowy -->
+      <mj-section background-color="#000000" padding="30px 20px">
+        <mj-column>
+          <mj-text 
+            color="#ffffff" 
+            font-size="16px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 15px 0"
+          >
+            TWÓJ KOD POWITALNY
+          </mj-text>
+          <mj-text 
+            css-class="code-box"
+            color="#ffffff" 
+            font-size="32px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="15px"
+          >
+            BENVENUTA10
+          </mj-text>
+          <mj-text 
+            color="#ffffff" 
+            font-size="14px" 
+            text-align="center" 
+            padding="15px 0 0 0"
+          >
+            10% zniżki na pierwsze zakupy
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Przycisk CTA -->
+      <mj-section padding="40px 30px">
+        <mj-column>
+          <mj-button 
+            href="https://www.soitalian.pl/?utm_source=welcome_email&utm_medium=email&utm_campaign=welcome&code=BENVENUTA10"
+            background-color="#000000" 
+            color="#ffffff" 
+            font-size="18px" 
+            font-weight="bold" 
+            padding="18px 40px" 
+            border-radius="6px"
+          >
+            SHOP NOW
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Produkty -->
+      <mj-section background-color="#f7f4f2" padding="40px 20px 20px">
+        <mj-column>
+          <mj-text 
+            color="#333333" 
+            font-size="22px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="0 0 30px 0"
+          >
+            NASZE BESTSELLERY 👑
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <mj-section background-color="#f7f4f2" padding="0 20px 40px">
+        <mj-column width="33.33%">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg" 
+            alt="Top Rieti Pink" 
+            width="150px" 
+            height="auto"
+          />
+          <mj-text 
+            color="#333333" 
+            font-size="14px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="10px 5px 0"
+          >
+            Top Rieti Pink
+          </mj-text>
+        </mj-column>
+        <mj-column width="33.33%">
+          <mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg" 
+            alt="Lovaria Hat – black ribbon" 
+            width="150px" 
+            height="auto"
+          />
+          <mj-text 
+            color="#333333" 
+            font-size="14px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="10px 5px 0"
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+        </mj-column>
+        <mj-column width="33.33%">
+          <mj-image 
+            src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg" 
+            alt="Lovaria Hat – lace ribbon" 
+            width="150px" 
+            height="auto"
+          />
+          <mj-text 
+            color="#333333" 
+            font-size="14px" 
+            font-weight="bold" 
+            text-align="center" 
+            padding="10px 5px 0"
+          >
+            Lovaria Hat – lace ribbon
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+      <!-- Separator -->
+      <mj-divider border-color="#e0e0e0" width="80%" padding="30px 0" />
+      
+      <!-- Dodatkowe informacje -->
+      <mj-section padding="20px 30px">
+        <mj-column>
+          <mj-text 
+            color="#666666" 
+            font-size="14px" 
+            line-height="22px" 
+            text-align="center"
+          >
+            ✨ <strong>Darmowa dostawa</strong> przy zamówieniu powyżej 200 zł<br>
+            🚚 <strong>Szybka realizacja</strong> zamówień w 1-2 dni robocze<br>
+            💝 <strong>Eleganckie pakowanie</strong> każdego zamówienia
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      
+    </mj-wrapper>
+    
+    <!-- Footer -->
+    <mj-section background-color="#000000" padding="30px 20px">
+      <mj-column>
+        <mj-text 
+          color="#ffffff" 
+          font-size="18px" 
+          font-weight="bold" 
+          text-align="center" 
+          padding="0 0 15px 0"
+        >
+          SoItalian - Włoski styl na co dzień
+        </mj-text>
+        <mj-text 
+          color="#cccccc" 
+          font-size="14px" 
+          line-height="20px" 
+          text-align="center" 
+          padding="0 0 20px 0"
+        >
+          📧 sklep@soitalian.pl | 📞 +48 577 555 555<br>
+          📍 ul. Przykładowa 1, Warsaw
+        </mj-text>
+        <mj-text 
+          color="#999999" 
+          font-size="12px" 
+          text-align="center"
+        >
+          Nie chcesz już otrzymywać naszych wiadomości? <a href="#" style="color: #999999;">Wypisz się tutaj</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+  </mj-body>
+</mjml>

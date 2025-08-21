@@ -1,0 +1,205 @@
+<mjml>
+  <mj-head>
+    <mj-title>Hit sezonu czeka na Ciebie!</mj-title>
+    <mj-preview>Ostatnie sztuki w magazynie! Top Rieti Pink - tylko 3 szt. w magazynie. Ocena 4.8/5 od 127 klientek.</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="Helvetica, Arial, sans-serif" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#f8fafc">
+    <mj-container max-width="600px">
+      
+      <!-- Urgency Header -->
+      <mj-section background-color="#dc2626" padding="15px 30px">
+        <mj-column>
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#ffffff"
+            align="center"
+            padding="0"
+          >
+            ⚡ Ostatnie sztuki w magazynie! Tylko 3 sztuki pozostały!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Welcome Section -->
+      <mj-section background-color="#ffffff" padding="30px 30px 20px">
+        <mj-column>
+          <mj-text 
+            font-size="26px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            Cześć! 👋
+          </mj-text>
+          <mj-text 
+            font-size="18px"
+            color="#4b5563"
+            align="center"
+            line-height="26px"
+            padding="0 0 20px 0"
+          >
+            Ten hit sezonu pokochały już setki naszych klientek.<br/>
+            <strong>⭐ 4.8/5</strong> z 127 opinii!
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Main Product - OneProductLeft Layout -->
+      <mj-section background-color="#ffffff" padding="20px 30px">
+        <mj-column width="45%">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink"
+            width="300px"
+            border-radius="8px"
+            align="center"
+            padding="0 20px 0 0"
+          />
+        </mj-column>
+        <mj-column width="55%">
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            padding="0 0 15px 0"
+            line-height="32px"
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            font-size="28px"
+            font-weight="bold"
+            color="#059669"
+            padding="0 0 20px 0"
+          >
+            <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; margin-right: 12px;">249 zł</span>
+            189 zł
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#6b7280"
+            padding="0 0 20px 0"
+            line-height="24px"
+          >
+            Elegancki top w różowym kolorze to absolutny hit tego sezonu! Wykonany z najwyższej jakości materiałów, zapewnia komfort noszenia przez cały dzień. Idealny na lato i wczesną jesień.
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#4b5563"
+            padding="0 0 20px 0"
+            line-height="22px"
+          >
+            ✅ Wysokiej jakości materiał<br/>
+            ✅ Wygodny krój<br/>
+            ✅ Idealny na każdą okazję<br/>
+            ✅ Dostępny w kilku rozmiarach
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=single-product"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="16px"
+            font-weight="bold"
+            padding="14px 28px"
+            border-radius="8px"
+            align="left"
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+      </mj-section>
+
+      <!-- Social Proof Section -->
+      <mj-section background-color="#f9fafb" padding="30px">
+        <mj-column>
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            💬 Co mówią nasze klientki:
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#374151"
+            align="center"
+            padding="0 0 15px 0"
+            line-height="24px"
+            font-style="italic"
+          >
+            "Absolutnie uwielbiam ten top! Jakość materiału jest niesamowita."
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            ⭐⭐⭐⭐⭐ - Małgorzata K.
+          </mj-text>
+          <mj-text 
+            font-size="16px"
+            color="#374151"
+            align="center"
+            padding="0 0 15px 0"
+            line-height="24px"
+            font-style="italic"
+          >
+            "Szybka dostawa, piękne opakowanie. Polecam!"
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+          >
+            ⭐⭐⭐⭐⭐ - Anna M.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Final CTA Section -->
+      <mj-section background-color="#1f2937" padding="40px 30px">
+        <mj-column>
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#ffffff"
+            align="center"
+            padding="0 0 20px 0"
+          >
+            🚨 Nie zwlekaj - zostało tylko 3 sztuk!
+          </mj-text>
+          <mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=single-product&urgency=true"
+            background-color="#dc2626"
+            color="#ffffff"
+            font-size="20px"
+            font-weight="bold"
+            padding="18px 36px"
+            border-radius="8px"
+          >
+            🛍️ Zamawiam Top Rieti Pink
+          </mj-button>
+          <mj-text 
+            font-size="14px"
+            color="#d1d5db"
+            align="center"
+            padding="20px 0 0 0"
+          >
+            ✅ Darmowa dostawa przy zamówieniu powyżej 150 zł<br/>
+            ✅ 30 dni na zwrot bez podania przyczyny
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+    </mj-container>
+  </mj-body>
+</mjml>

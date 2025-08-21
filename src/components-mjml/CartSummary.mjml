@@ -1,0 +1,146 @@
+<!-- CartSummary Component - Order Summary with Items -->
+
+<!-- Title -->
+<mj-section padding="30px 30px 20px" background-color="#ffffff">
+  <mj-column>
+    <mj-text 
+      font-size="24px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+    >
+      Podsumowanie zamówienia
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+<!-- Order Items -->
+<mj-section 
+  background-color="#ffffff" 
+  padding="20px 30px" 
+  border="1px solid #e5e7eb" 
+  border-radius="8px"
+>
+  <!-- Item 1 -->
+  <mj-column width="25%">
+    <mj-image 
+      src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+      alt="Top Rieti Pink"
+      width="80px"
+      border-radius="6px"
+    />
+  </mj-column>
+  <mj-column width="50%">
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 5px 0"
+    >
+      Top Rieti Pink
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+    >
+      Ilość: 1
+    </mj-text>
+  </mj-column>
+  <mj-column width="25%">
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="right"
+    >
+      199 zł
+    </mj-text>
+  </mj-column>
+
+  <!-- Item 2 -->
+  <mj-column width="25%">
+    <mj-image 
+      src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+      alt="Lovaria Hat"
+      width="80px"
+      border-radius="6px"
+    />
+  </mj-column>
+  <mj-column width="50%">
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="center"
+      padding="0 0 5px 0"
+    >
+      Lovaria Hat – black ribbon
+    </mj-text>
+    <mj-text 
+      font-size="14px"
+      color="#6b7280"
+      align="center"
+    >
+      Ilość: 1
+    </mj-text>
+  </mj-column>
+  <mj-column width="25%">
+    <mj-text 
+      font-size="16px"
+      font-weight="bold"
+      color="#1f2937"
+      align="right"
+    >
+      149 zł
+    </mj-text>
+  </mj-column>
+</mj-section>
+
+<!-- Order Summary -->
+<mj-section 
+  background-color="#f9fafb" 
+  padding="30px" 
+  border="1px solid #e5e7eb" 
+  border-radius="8px"
+>
+  <mj-column>
+    <mj-table>
+      <tr style="border-bottom: 1px solid #e5e7eb;">
+        <td style="padding: 12px 0; font-size: 16px; color: #374151;">Suma częściowa</td>
+        <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">348 zł</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e5e7eb;">
+        <td style="padding: 12px 0; font-size: 16px; color: #374151;">Dostawa</td>
+        <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">15 zł</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #e5e7eb;">
+        <td style="padding: 12px 0; font-size: 16px; color: #374151;">Podatek VAT</td>
+        <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">74 zł</td>
+      </tr>
+      <tr>
+        <td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; font-weight: bold;">Razem</td>
+        <td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; text-align: right; font-weight: bold;">437 zł</td>
+      </tr>
+    </mj-table>
+  </mj-column>
+</mj-section>
+
+<!-- Checkout Button -->
+<mj-section padding="30px">
+  <mj-column>
+    <mj-button 
+      href="https://www.soitalian.pl/checkout"
+      background-color="#059669"
+      color="#ffffff"
+      font-size="18px"
+      font-weight="bold"
+      padding="16px 40px"
+      border-radius="8px"
+      width="100%"
+    >
+      Dokończ zakup
+    </mj-button>
+  </mj-column>
+</mj-section>
