@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porzucony Koszyk - MJML Source</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .code-container {
+            background: #1f2937;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .code-header {
+            background: #374151;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #4b5563;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .code-title {
+            color: #f3f4f6;
+            font-weight: 500;
+        }
+        
+        .copy-btn {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #9ca3af;
+        }
+        
+        pre {
+            margin: 0;
+            padding: 1.5rem;
+            overflow-x: auto;
+            background: #1f2937;
+            color: #f3f4f6;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+            
+            pre {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📄 Porzucony Koszyk - MJML</h1>
+            <a href="/" class="back-link">← Powrót do listy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="actions">
+            <a href="/template/abandoned-cart" class="btn btn-secondary">👁️ Podgląd email</a>
+            <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
+        </div>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span class="code-title">Kod MJML - Porzucony Koszyk</span>
+                <button class="copy-btn" onclick="copyToClipboard()">📋 Kopiuj</button>
+            </div>
+            <pre id="mjml-code">&lt;mjml lang="pl"&gt;
+  &lt;mj-head&gt;
+  &lt;mj-title&gt;Monika, Twój koszyk czeka na Ciebie!&lt;/mj-title&gt;&lt;mj-preview&gt;Nie zapomnij o swoich ulubionych produktach! Koszyk CART_006393 z 15% zniżką przez następne 24h.&lt;/mj-preview&gt;
+&lt;/mj-head&gt;&lt;mj-body background-color="#f7f4f2"&gt;
+  &lt;mj-wrapper max-width="600px"&gt;
+  &lt;mj-section background-color="#f59e0b" padding="20px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="18px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0"
+        &gt;
+          ⏰ Twój koszyk wkrótce wygaśnie! Zostało tylko 24 godzin
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="40px 30px 20px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="28px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          Cześć Monika! 👋
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="18px"
+          color="#4b5563"
+          align="center"
+          line-height="26px"
+          padding="0 0 25px 0"
+        &gt;
+          Zauważyliśmy, że zostwiłaś produkty w koszyku.&lt;br/&gt;
+          Nie martw się - zachowaliśmy je dla Ciebie!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="20px"
+          font-weight="bold"
+          color="#dc2626"
+          align="center"
+          padding="0 0 10px 0"
+        &gt;
+          🎁 Specjalnie dla Ciebie: 15% zniżki!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#059669"
+          align="center"
+          font-weight="bold"
+        &gt;
+          Kod: POWROT15
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="30px 30px 20px"&gt;
+  
+        &lt;mj-column&gt;
+          &lt;mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+          &gt;
+            🛒 Twój zarezerwowany koszyk
+          &lt;/mj-text&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" border="1px solid #e5e7eb" border-radius="8px" padding="20px 30px"&gt;
+  
+        &lt;mj-column width="25%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink"
+            width="80px"
+            border-radius="6px"
+          /&gt;
+        &lt;/mj-column&gt;
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          &gt;
+            Top Rieti Pink
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+          &gt;
+            Quantity: 1
+          &lt;/mj-text&gt;
+        &lt;/mj-column&gt;
+        &lt;mj-column width="25%"&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="right"
+          &gt;
+            199 zł
+          &lt;/mj-text&gt;
+        &lt;/mj-column&gt;
+      
+        &lt;mj-column width="25%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Lovaria Hat – black ribbon"
+            width="80px"
+            border-radius="6px"
+          /&gt;
+        &lt;/mj-column&gt;
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          &gt;
+            Lovaria Hat – black ribbon
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+          &gt;
+            Quantity: 2
+          &lt;/mj-text&gt;
+        &lt;/mj-column&gt;
+        &lt;mj-column width="25%"&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="right"
+          &gt;
+            149 zł
+          &lt;/mj-text&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#f9fafb" border="1px solid #e5e7eb" border-radius="8px" padding="30px"&gt;
+  
+        &lt;mj-column&gt;
+          &lt;mj-table&gt;
+            &lt;tr style="border-bottom: 1px solid #e5e7eb;"&gt;
+              &lt;td style="padding: 12px 0; font-size: 16px; color: #374151;"&gt;Subtotal&lt;/td&gt;
+              &lt;td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;"&gt;497 zł&lt;/td&gt;
+            &lt;/tr&gt;
+            
+            &lt;tr style="border-bottom: 1px solid #e5e7eb;"&gt;
+              &lt;td style="padding: 12px 0; font-size: 16px; color: #374151;"&gt;Shipping&lt;/td&gt;
+              &lt;td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;"&gt;0 zł&lt;/td&gt;
+            &lt;/tr&gt;
+            
+            
+            &lt;tr style="border-bottom: 1px solid #e5e7eb;"&gt;
+              &lt;td style="padding: 12px 0; font-size: 16px; color: #374151;"&gt;Tax&lt;/td&gt;
+              &lt;td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;"&gt;- 75 zł&lt;/td&gt;
+            &lt;/tr&gt;
+            
+            &lt;tr&gt;
+              &lt;td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; font-weight: bold;"&gt;Total&lt;/td&gt;
+              &lt;td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; text-align: right; font-weight: bold;"&gt;422 zł&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/mj-table&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section padding="30px"&gt;
+  
+        &lt;mj-column&gt;
+          &lt;mj-button 
+            href="https://www.soitalian.pl//cart/CART_006393?utm_source=abandoned_cart&discount=POWROT15"
+            background-color="#059669"
+            color="#ffffff"
+            font-size="18px"
+            font-weight="bold"
+            padding="16px 40px"
+            border-radius="8px"
+            width="100%"
+          &gt;
+            Dokończ zakupy
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#ecfdf5" padding="30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#065f46"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          🎯 Dlaczego warto dokończyć zakupy już teraz?
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          padding="0 0 12px 0"
+          line-height="24px"
+        &gt;
+          ✅ &lt;strong&gt;Ekskluzywna zniżka 15%&lt;/strong&gt; - tylko dla Ciebie!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          padding="0 0 12px 0"
+          line-height="24px"
+        &gt;
+          ✅ &lt;strong&gt;Darmowa dostawa&lt;/strong&gt; przy zamówieniu powyżej 150 zł
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          padding="0 0 12px 0"
+          line-height="24px"
+        &gt;
+          ✅ &lt;strong&gt;30 dni na zwrot&lt;/strong&gt; bez podania przyczyny
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          line-height="24px"
+        &gt;
+          ✅ &lt;strong&gt;Szybka dostawa&lt;/strong&gt; w 1-2 dni robocze
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#1f2937" padding="40px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="24px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 15px 0"
+        &gt;
+          ⏰ Nie czekaj dłużej!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="18px"
+          color="#f3f4f6"
+          align="center"
+          padding="0 0 25px 0"
+          line-height="26px"
+        &gt;
+          Koszyk zostanie usunięty za 24 godzin.&lt;br/&gt;
+          Kod &lt;strong&gt;POWROT15&lt;/strong&gt; wygasa wraz z koszykiem!
+        &lt;/mj-text&gt;
+        &lt;mj-button 
+          href="https://www.soitalian.pl//cart/CART_006393?utm_source=abandoned_cart&discount=POWROT15"
+          background-color="#dc2626"
+          color="#ffffff"
+          font-size="20px"
+          font-weight="bold"
+          padding="18px 36px"
+          border-radius="8px"
+        &gt;
+          🚀 Dokończ zakupy z 15% zniżką
+        &lt;/mj-button&gt;
+        &lt;mj-text 
+          font-size="14px"
+          color="#9ca3af"
+          align="center"
+          padding="20px 0 0 0"
+        &gt;
+          Masz pytania? &lt;a href="mailto:sklep@soitalian.pl" style="color: #f59e0b;"&gt;Napisz do nas&lt;/a&gt;
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;
+&lt;/mj-wrapper&gt;
+&lt;/mj-body&gt;
+&lt;/mjml&gt;</pre>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard() {
+            const code = document.getElementById('mjml-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Skopiowano!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

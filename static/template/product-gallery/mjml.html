@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Produktów - MJML Source</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .code-container {
+            background: #1f2937;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .code-header {
+            background: #374151;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #4b5563;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .code-title {
+            color: #f3f4f6;
+            font-weight: 500;
+        }
+        
+        .copy-btn {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #9ca3af;
+        }
+        
+        pre {
+            margin: 0;
+            padding: 1.5rem;
+            overflow-x: auto;
+            background: #1f2937;
+            color: #f3f4f6;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+            
+            pre {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📄 Galeria Produktów - MJML</h1>
+            <a href="/" class="back-link">← Powrót do listy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="actions">
+            <a href="/template/product-gallery" class="btn btn-secondary">👁️ Podgląd email</a>
+            <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
+        </div>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span class="code-title">Kod MJML - Galeria Produktów</span>
+                <button class="copy-btn" onclick="copyToClipboard()">📋 Kopiuj</button>
+            </div>
+            <pre id="mjml-code">&lt;mjml lang="pl"&gt;
+  &lt;mj-head&gt;
+  &lt;mj-title&gt;Patrycja, Kompletna Kolekcja Lato 2024&lt;/mj-title&gt;&lt;mj-preview&gt;Kompletna Kolekcja Lato 2024 - wszystkie produkty w jednym miejscu. Znajdź swój idealny look!&lt;/mj-preview&gt;
+&lt;/mj-head&gt;&lt;mj-body background-color="#f7f4f2"&gt;
+  &lt;mj-wrapper max-width="600px"&gt;
+  &lt;mj-section background-color="#1f2937" padding="50px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="36px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+          line-height="44px"
+        &gt;
+          Kompletna Kolekcja
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="20px"
+          color="#d1d5db"
+          align="center"
+          padding="0 0 15px 0"
+          line-height="28px"
+        &gt;
+          Lato 2024
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#9ca3af"
+          align="center"
+          line-height="24px"
+        &gt;
+          Cześć Patrycja! Poznaj wszystkie produkty z naszej najnowszej kolekcji.&lt;br/&gt;
+          Każdy element został starannie dobrany z myślą o Tobie.
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#f7f4f2" padding="40px 30px 20px"&gt;
+  
+        &lt;mj-column&gt;
+          &lt;mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+          &gt;
+            🌟 Wszystkie produkty kolekcji 🌟
+          &lt;/mj-text&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#f7f4f2" padding="20px 30px"&gt;
+  
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          /&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          &gt;
+            Top Rieti Pink
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          &gt;
+            
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          &gt;
+            199 zł
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          &gt;
+            View Product
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Lovaria Hat – black ribbon"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          /&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          &gt;
+            Lovaria Hat – black ribbon
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          &gt;
+            
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          &gt;
+            149 zł
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          &gt;
+            View Product
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#f7f4f2" padding="20px 30px"&gt;
+  
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+            alt="Lovaria Hat – lace ribbon"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          /&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          &gt;
+            Lovaria Hat – lace ribbon
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          &gt;
+            
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          &gt;
+            159 zł
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          &gt;
+            View Product
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink (Biała)"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          /&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          &gt;
+            Top Rieti Pink (Biała)
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          &gt;
+            
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          &gt;
+            209 zł
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=product-gallery&variant=white"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          &gt;
+            View Product
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#f7f4f2" padding="20px 30px"&gt;
+  
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Lovaria Hat – black ribbon (Czarny)"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          /&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          &gt;
+            Lovaria Hat – black ribbon (Czarny)
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          &gt;
+            
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          &gt;
+            149 zł
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery&variant=black"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          &gt;
+            View Product
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+        &lt;mj-column width="50%"&gt;
+          &lt;mj-image 
+            src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+            alt="Lovaria Hat – lace ribbon (Beżowy)"
+            width="180px"
+            border-radius="8px"
+            padding="0 10px 15px"
+          /&gt;
+          &lt;mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 8px"
+            height="45px"
+            line-height="20px"
+          &gt;
+            Lovaria Hat – lace ribbon (Beżowy)
+          &lt;/mj-text&gt;
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 10px 8px"
+            line-height="18px"
+            height="38px"
+          &gt;
+            
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="18px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 10px 15px"
+          &gt;
+            169 zł
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=product-gallery&variant=beige"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+          &gt;
+            View Product
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#f3f4f6" padding="40px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="24px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 25px 0"
+        &gt;
+          ✨ Dlaczego pokochasz naszą kolekcję?
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#f3f4f6" padding="0 30px 40px"&gt;
+  
+      &lt;mj-column width="50%"&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 20px 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;🎨 Unikalne wzory&lt;/strong&gt;&lt;br/&gt;
+          Każdy element został zaprojektowany z dbałością o szczegóły
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 0 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;🌱 Ekologiczne materiały&lt;/strong&gt;&lt;br/&gt;
+          Dbamy o środowisko wybierając najlepsze materiały
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+      &lt;mj-column width="50%"&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 20px 15px"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;👗 Uniwersalny styl&lt;/strong&gt;&lt;br/&gt;
+          Produkty pasują do różnych okazji i stylizacji
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 0 15px"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;💎 Najwyższa jakość&lt;/strong&gt;&lt;br/&gt;
+          Testowane przez setki zadowolonych klientek
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#059669" padding="45px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="28px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          Gotowa na shopping, Patrycja?
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="18px"
+          color="#d1fae5"
+          align="center"
+          padding="0 0 30px 0"
+          line-height="26px"
+        &gt;
+          Wszystkie produkty czekają w naszym sklepie online.&lt;br/&gt;
+          Dostawa gratis przy zamówieniu powyżej 150 zł!
+        &lt;/mj-text&gt;
+        &lt;mj-button 
+          href="https://www.soitalian.pl/?utm_source=newsletter&utm_campaign=product-gallery"
+          background-color="#ffffff"
+          color="#059669"
+          font-size="20px"
+          font-weight="bold"
+          padding="18px 36px"
+          border-radius="8px"
+        &gt;
+          🛍️ Odkryj całą kolekcję
+        &lt;/mj-button&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;
+&lt;/mj-wrapper&gt;
+&lt;/mj-body&gt;
+&lt;/mjml&gt;</pre>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard() {
+            const code = document.getElementById('mjml-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Skopiowano!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

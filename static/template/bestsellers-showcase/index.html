@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestsellery - Email Template Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .preview-info {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .preview-info h2 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .preview-info p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .email-preview {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .email-frame {
+            width: 100%;
+            min-height: 800px;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📧 Bestsellery</h1>
+            <a href="/" class="back-link">← Powrót do listy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="preview-info">
+            <h2>Informacje o szablonie</h2>
+            <p>Promocja bestsellerów z ThreeCardsRow</p>
+            <strong>ID:</strong> bestsellers-showcase
+        </div>
+        
+        <div class="actions">
+            <a href="/template/bestsellers-showcase/mjml" class="btn btn-secondary">📄 Zobacz MJML</a>
+            <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
+        </div>
+        
+        <div class="email-preview">
+            <iframe class="email-frame" srcdoc="<mjml lang=&quot;pl&quot;>
+  <mj-head>
+  <mj-title>Magdalena, nasze bestsellery czekają!</mj-title><mj-preview>Ostatnie sztuki! Sprawdź nasze najpopularniejsze produkty z kodem BESTSELLER20. Ważne do 31 sierpnia 2024.</mj-preview>
+</mj-head><mj-body background-color=&quot;#f7f4f2&quot;>
+  <mj-wrapper max-width=&quot;600px&quot;>
+  <mj-section background-color=&quot;#f59e0b&quot; padding=&quot;20px 30px&quot;>
+  
+      <mj-column>
+        <mj-text 
+          font-size=&quot;18px&quot;
+          font-weight=&quot;bold&quot;
+          color=&quot;#ffffff&quot;
+          align=&quot;center&quot;
+          padding=&quot;0&quot;
+        >
+          🔥 Ostatnie sztuki! • Kod: BESTSELLER20 • Do 31 sierpnia 2024
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color=&quot;#ffffff&quot; padding=&quot;40px 30px 20px&quot;>
+  
+      <mj-column>
+        <mj-text 
+          font-size=&quot;24px&quot;
+          font-weight=&quot;bold&quot;
+          color=&quot;#1f2937&quot;
+          align=&quot;center&quot;
+          padding=&quot;0 0 15px 0&quot;
+        >
+          Cześć Magdalena! 👋
+        </mj-text>
+        <mj-text 
+          font-size=&quot;16px&quot;
+          color=&quot;#6b7280&quot;
+          align=&quot;center&quot;
+          line-height=&quot;24px&quot;
+        >
+          Te produkty pokochały setki naszych klientek. Teraz Ty też możesz je odkryć z ekskluzywną zniżką!
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color=&quot;#ffffff&quot; padding=&quot;40px 30px 20px&quot;>
+  
+          <mj-column>
+            <mj-text 
+              font-size=&quot;28px&quot;
+              font-weight=&quot;bold&quot;
+              color=&quot;#1f2937&quot;
+              align=&quot;center&quot;
+              padding=&quot;0 0 20px 0&quot;
+            >
+              ⭐ Nasze Bestsellery ⭐
+            </mj-text>
+          </mj-column>
+        
+</mj-section><mj-section background-color=&quot;#ffffff&quot; padding=&quot;20px 15px 40px&quot;>
+  
+        <mj-column width=&quot;33.33%&quot; padding=&quot;0 10px&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg&quot;
+            alt=&quot;Top Rieti Pink&quot;
+            width=&quot;160px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            height=&quot;50px&quot;
+            line-height=&quot;22px&quot;
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;40px&quot;
+          >
+            Nasz absolutny bestseller!
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>199 zł</span>
+            
+            169 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=bestsellers&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;14px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;12px 20px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;140px&quot;
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+      
+        <mj-column width=&quot;33.33%&quot; padding=&quot;0 10px&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg&quot;
+            alt=&quot;Lovaria Hat – black ribbon&quot;
+            width=&quot;160px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            height=&quot;50px&quot;
+            line-height=&quot;22px&quot;
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;40px&quot;
+          >
+            Idealny na każdą okazję
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>149 zł</span>
+            
+            127 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=bestsellers&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;14px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;12px 20px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;140px&quot;
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+      
+        <mj-column width=&quot;33.33%&quot; padding=&quot;0 10px&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg&quot;
+            alt=&quot;Lovaria Hat – lace ribbon&quot;
+            width=&quot;160px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            height=&quot;50px&quot;
+            line-height=&quot;22px&quot;
+          >
+            Lovaria Hat – lace ribbon
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;40px&quot;
+          >
+            Subtelna elegancja
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>159 zł</span>
+            
+            135 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=bestsellers&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;14px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;12px 20px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;140px&quot;
+          >
+            Kup teraz
+          </mj-button>
+        </mj-column>
+      
+</mj-section><mj-section background-color=&quot;#1f2937&quot; padding=&quot;40px 30px&quot;>
+  
+      <mj-column>
+        <mj-text 
+          font-size=&quot;20px&quot;
+          font-weight=&quot;bold&quot;
+          color=&quot;#ffffff&quot;
+          align=&quot;center&quot;
+          padding=&quot;0 0 20px 0&quot;
+        >
+          Nie zwlekaj! Oferta ważna tylko do 31 sierpnia 2024
+        </mj-text>
+        <mj-button 
+          href=&quot;https://www.soitalian.pl/?utm_source=newsletter&utm_campaign=bestsellers&code=BESTSELLER20&quot;
+          background-color=&quot;#f59e0b&quot;
+          color=&quot;#000000&quot;
+          font-size=&quot;18px&quot;
+          font-weight=&quot;bold&quot;
+          padding=&quot;16px 32px&quot;
+          border-radius=&quot;8px&quot;
+        >
+          🛍️ Zobacz wszystkie bestsellery
+        </mj-button>
+      </mj-column>
+    
+</mj-section>
+</mj-wrapper>
+</mj-body>
+</mjml>"></iframe>
+        </div>
+    </div>
+</body>
+</html>

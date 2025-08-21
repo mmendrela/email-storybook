@@ -1,0 +1,253 @@
+<mjml lang="pl">
+  <mj-head>
+  <mj-title>Anna, odkryj naszą kolekcję Lato 2024!</mj-title><mj-preview>Ekskluzywne produkty z 20% zniżką. Kod: KATALOG20. Poznaj naszą kolekcję Lato 2024!</mj-preview>
+</mj-head><mj-body background-color="#f7f4f2">
+  <mj-wrapper max-width="600px">
+  <mj-section background-color="#ffffff" padding="40px 30px 20px">
+  
+          <mj-column>
+            <mj-text 
+              font-size="28px"
+              font-weight="bold"
+              color="#1f2937"
+              align="center"
+              padding="0 0 20px 0"
+            >
+              Kolekcja Lato 2024 • Ekskluzywnie dla Anna
+            </mj-text>
+          </mj-column>
+        
+</mj-section><mj-section background-color="#ffffff" padding="20px 30px">
+  
+            <mj-column width="45%">
+              <mj-image 
+                src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+                alt="Top Rieti Pink"
+                width="280px"
+                border-radius="8px"
+                align="center"
+                padding="0 15px 0 0"
+              />
+            </mj-column>
+            <mj-column width="55%">
+              <mj-text 
+                font-size="24px"
+                font-weight="bold"
+                color="#1f2937"
+                padding="0 0 12px 0"
+                line-height="32px"
+              >
+                Top Rieti Pink
+              </mj-text>
+              
+              <mj-text 
+                font-size="16px"
+                color="#6b7280"
+                padding="0 0 16px 0"
+                line-height="24px"
+              >
+                Elegancki top rieti pink w różowym kolorze, idealny na Lato 2024. Wykonany z wysokiej jakości materiału, zapewnia komfort noszenia przez cały dzień.
+              </mj-text>
+              
+              <mj-text 
+                font-size="28px"
+                font-weight="bold"
+                color="#059669"
+                padding="0 0 20px 0"
+              >
+                
+                  <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; margin-right: 12px;">249 zł</span>
+                
+                199 zł
+              </mj-text>
+              <mj-button 
+                href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html"
+                background-color="#1f2937"
+                color="#ffffff"
+                font-size="16px"
+                font-weight="bold"
+                padding="14px 28px"
+                border-radius="8px"
+                align="left"
+              >
+                Zobacz szczegóły
+              </mj-button>
+            </mj-column>
+          
+</mj-section><mj-section background-color="#ffffff" padding="20px 30px">
+  
+            <mj-column width="55%">
+              <mj-text 
+                font-size="24px"
+                font-weight="bold"
+                color="#1f2937"
+                padding="0 0 12px 0"
+                line-height="32px"
+                align="right"
+              >
+                Lovaria Hat – black ribbon
+              </mj-text>
+              
+              <mj-text 
+                font-size="16px"
+                color="#6b7280"
+                padding="0 0 16px 0"
+                line-height="24px"
+                align="right"
+              >
+                Stylowy lovaria hat – black ribbon, idealny dodatek do letnich stylizacji. Chroni przed słońcem zachowując elegancki wygląd.
+              </mj-text>
+              
+              <mj-text 
+                font-size="28px"
+                font-weight="bold"
+                color="#059669"
+                padding="0 0 20px 0"
+                align="right"
+              >
+                
+                149 zł
+              </mj-text>
+              <mj-button 
+                href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html"
+                background-color="#1f2937"
+                color="#ffffff"
+                font-size="16px"
+                font-weight="bold"
+                padding="14px 28px"
+                border-radius="8px"
+                align="right"
+              >
+                Zobacz szczegóły
+              </mj-button>
+            </mj-column>
+            <mj-column width="45%">
+              <mj-image 
+                src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+                alt="Lovaria Hat – black ribbon"
+                width="280px"
+                border-radius="8px"
+                align="center"
+                padding="0 0 0 15px"
+              />
+            </mj-column>
+          
+</mj-section><mj-section background-color="#ffffff" padding="20px 30px">
+  
+            <mj-column width="45%">
+              <mj-image 
+                src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+                alt="Lovaria Hat – lace ribbon"
+                width="280px"
+                border-radius="8px"
+                align="center"
+                padding="0 15px 0 0"
+              />
+            </mj-column>
+            <mj-column width="55%">
+              <mj-text 
+                font-size="24px"
+                font-weight="bold"
+                color="#1f2937"
+                padding="0 0 12px 0"
+                line-height="32px"
+              >
+                Lovaria Hat – lace ribbon
+              </mj-text>
+              
+              <mj-text 
+                font-size="16px"
+                color="#6b7280"
+                padding="0 0 16px 0"
+                line-height="24px"
+              >
+                Elegancki lovaria hat – lace ribbon, dodaje uroku każdej stylizacji. Delikatna ażurowa wstążka to subtelny akcent.
+              </mj-text>
+              
+              <mj-text 
+                font-size="28px"
+                font-weight="bold"
+                color="#059669"
+                padding="0 0 20px 0"
+              >
+                
+                159 zł
+              </mj-text>
+              <mj-button 
+                href="https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html"
+                background-color="#1f2937"
+                color="#ffffff"
+                font-size="16px"
+                font-weight="bold"
+                padding="14px 28px"
+                border-radius="8px"
+                align="left"
+              >
+                Zobacz szczegóły
+              </mj-button>
+            </mj-column>
+          
+</mj-section><mj-section background-color="#ffffff" padding="20px 30px 40px">
+  
+            <mj-column width="55%">
+              <mj-text 
+                font-size="24px"
+                font-weight="bold"
+                color="#1f2937"
+                padding="0 0 12px 0"
+                line-height="32px"
+                align="right"
+              >
+                Top Rieti Pink (Edycja Limitowana)
+              </mj-text>
+              
+              <mj-text 
+                font-size="16px"
+                color="#6b7280"
+                padding="0 0 16px 0"
+                line-height="24px"
+                align="right"
+              >
+                Limitowana edycja naszego bestselleru z ekskluzywnym wykończeniem. Dostępna tylko dla wybranych klientów i tylko przez ograniczony czas.
+              </mj-text>
+              
+              <mj-text 
+                font-size="28px"
+                font-weight="bold"
+                color="#059669"
+                padding="0 0 20px 0"
+                align="right"
+              >
+                
+                  <span style="text-decoration: line-through; color: #9ca3af; font-size: 18px; margin-right: 12px;">279 zł</span>
+                
+                229 zł
+              </mj-text>
+              <mj-button 
+                href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html"
+                background-color="#1f2937"
+                color="#ffffff"
+                font-size="16px"
+                font-weight="bold"
+                padding="14px 28px"
+                border-radius="8px"
+                align="right"
+              >
+                Zobacz szczegóły
+              </mj-button>
+            </mj-column>
+            <mj-column width="45%">
+              <mj-image 
+                src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+                alt="Top Rieti Pink (Edycja Limitowana)"
+                width="280px"
+                border-radius="8px"
+                align="center"
+                padding="0 0 0 15px"
+              />
+            </mj-column>
+          
+</mj-section>
+</mj-wrapper>
+</mj-body>
+</mjml>

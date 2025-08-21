@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plany Cenowe - MJML Source</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .code-container {
+            background: #1f2937;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .code-header {
+            background: #374151;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #4b5563;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .code-title {
+            color: #f3f4f6;
+            font-weight: 500;
+        }
+        
+        .copy-btn {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #9ca3af;
+        }
+        
+        pre {
+            margin: 0;
+            padding: 1.5rem;
+            overflow-x: auto;
+            background: #1f2937;
+            color: #f3f4f6;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+            
+            pre {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📄 Plany Cenowe - MJML</h1>
+            <a href="/" class="back-link">← Powrót do listy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="actions">
+            <a href="/template/pricing-plans" class="btn btn-secondary">👁️ Podgląd email</a>
+            <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
+        </div>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span class="code-title">Kod MJML - Plany Cenowe</span>
+                <button class="copy-btn" onclick="copyToClipboard()">📋 Kopiuj</button>
+            </div>
+            <pre id="mjml-code">&lt;mjml lang="pl"&gt;
+  &lt;mj-head&gt;
+  &lt;mj-title&gt;Natalia, dołącz do SoItalian VIP Club!&lt;/mj-title&gt;&lt;mj-preview&gt;Ekskluzywny program członkowski SoItalian VIP Club. Tylko do 31 sierpnia 2024 - 30% zniżki z kodem VIP30!&lt;/mj-preview&gt;
+&lt;/mj-head&gt;&lt;mj-body background-color="#f7f4f2"&gt;
+  &lt;mj-wrapper max-width="600px"&gt;
+  &lt;mj-section background-color="#1f2937" padding="50px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="36px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+          line-height="44px"
+        &gt;
+          🌟 SoItalian VIP Club 🌟
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="20px"
+          color="#f59e0b"
+          align="center"
+          padding="0 0 15px 0"
+          font-weight="bold"
+        &gt;
+          PREMIERA PROGRAMU CZŁONKOWSKIEGO
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="18px"
+          color="#d1d5db"
+          align="center"
+          line-height="26px"
+        &gt;
+          Cześć Natalia! Zapraszamy Cię do ekskluzywnego klubu&lt;br/&gt;
+          z wyjątkowymi korzyściami i priorytetowym dostępem do nowości.
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#dc2626" padding="20px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 10px 0"
+        &gt;
+          🔥 OFERTA STARTOWA - 30% ZNIŻKI!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#fecaca"
+          align="center"
+        &gt;
+          Kod: &lt;strong&gt;VIP30&lt;/strong&gt; • Ważne do: 31 sierpnia 2024
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#f9fafb" padding="40px 20px"&gt;
+  
+        &lt;mj-column 
+          width="33.333333333333336%"
+          background-color="#f8fafc"
+          border="1px solid #e5e7eb"
+          border-radius="12px"
+          padding="30px 20px"
+        &gt;
+          
+          
+          &lt;mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          &gt;
+            SoItalian Basic
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          &gt;
+            49 zł
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          &gt;
+            miesięcznie
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          &gt;
+            • 5% zniżki na wszystkie produkty&lt;br&gt;• Dostęp do wyprzedaży 24h wcześniej&lt;br&gt;• Bezpłatna dostawa od 100 zł&lt;br&gt;• Newsletter z nowościami&lt;br&gt;• Program punktów lojalnościowych
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl//membership/basic?utm_source=newsletter&code=VIP30"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          &gt;
+            Wybierz Basic
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+        &lt;mj-column 
+          width="33.333333333333336%"
+          background-color="#ffffff"
+          border="2px solid #3b82f6"
+          border-radius="12px"
+          padding="30px 20px"
+        &gt;
+          
+          &lt;mj-text 
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            text-transform="uppercase"
+            align="center"
+            padding="6px 12px"
+            border-radius="16px"
+            margin="0 0 20px 0"
+          &gt;
+            NAJPOPULARNIEJSZY
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          &gt;
+            SoItalian Premium
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          &gt;
+            89 zł
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          &gt;
+            miesięcznie
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          &gt;
+            • Wszystko z pakietu Basic&lt;br&gt;• 10% zniżki na wszystkie produkty&lt;br&gt;• Darmowa dostawa zawsze&lt;br&gt;• Ekskluzywne produkty tylko dla Premium&lt;br&gt;• Priorytetowy dostęp do nowości&lt;br&gt;• Personalna stylistka online&lt;br&gt;• Specjalne prezenty urodzinowe
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl//membership/premium?utm_source=newsletter&code=VIP30"
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          &gt;
+            Wybierz Premium
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+        &lt;mj-column 
+          width="33.333333333333336%"
+          background-color="#f8fafc"
+          border="1px solid #e5e7eb"
+          border-radius="12px"
+          padding="30px 20px"
+        &gt;
+          
+          &lt;mj-text 
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            text-transform="uppercase"
+            align="center"
+            padding="6px 12px"
+            border-radius="16px"
+            margin="0 0 20px 0"
+          &gt;
+            EKSKLUZYWNY
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          &gt;
+            SoItalian VIP
+          &lt;/mj-text&gt;
+          
+          &lt;mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          &gt;
+            139 zł
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          &gt;
+            miesięcznie
+          &lt;/mj-text&gt;
+          
+          
+          &lt;mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          &gt;
+            • Wszystko z pakietu Premium&lt;br&gt;• 15% zniżki na wszystkie produkty&lt;br&gt;• Ekskluzywna kolekcja VIP&lt;br&gt;• Osobista stylistka w sklepie&lt;br&gt;• Bezpłatne alteracje i dopasowania&lt;br&gt;• VIP events i pokazy mody&lt;br&gt;• Concierge shopping service&lt;br&gt;• Prezenty sezonowe
+          &lt;/mj-text&gt;
+          
+          &lt;mj-button 
+            href="https://www.soitalian.pl//membership/vip?utm_source=newsletter&code=VIP30"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          &gt;
+            Zostań VIP
+          &lt;/mj-button&gt;
+        &lt;/mj-column&gt;
+      
+&lt;/mj-section&gt;&lt;mj-section background-color="#f3f4f6" padding="40px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="26px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 30px 0"
+        &gt;
+          ✨ Dlaczego SoItalian VIP Club?
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#f3f4f6" padding="0 30px 40px"&gt;
+  
+      &lt;mj-column width="50%"&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 20px 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;🎯 Ekskluzywność&lt;/strong&gt;&lt;br/&gt;
+          Dostęp do limitowanych kolekcji i produktów niedostępnych publicznie
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 20px 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;👗 Styling&lt;/strong&gt;&lt;br/&gt;
+          Profesjonalne doradztwo stylistyczne dopasowane do Twoich potrzeb
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 0 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;🎊 Wydarzenia&lt;/strong&gt;&lt;br/&gt;
+          Zaproszenia na ekskluzywne pokazy mody i wydarzenia VIP
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+      &lt;mj-column width="50%"&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 20px 15px"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;💰 Oszczędności&lt;/strong&gt;&lt;br/&gt;
+          Stałe zniżki od 5% do 15% na wszystkie zakupy przez cały rok
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 20px 15px"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;🚚 Wygoda&lt;/strong&gt;&lt;br/&gt;
+          Darmowe dostawy, szybkie zwroty i priorytetowa obsługa
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 0 15px"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;🎁 Prezenty&lt;/strong&gt;&lt;br/&gt;
+          Regularne niespodzianki, prezenty urodzinowe i sezonowe
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="40px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 25px 0"
+        &gt;
+          💬 Co mówią nasze VIP członkinie:
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          align="center"
+          padding="0 0 15px 0"
+          line-height="24px"
+          font-style="italic"
+        &gt;
+          "Program VIP to najlepsza inwestycja! Oszczędzam setki złotych rocznie, a stylistka zawsze doradzi mi idealne produkty."
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="14px"
+          color="#6b7280"
+          align="center"
+          padding="0 0 25px 0"
+        &gt;
+          ⭐⭐⭐⭐⭐ - Karolina W., członkini VIP od 2 lat
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#374151"
+          align="center"
+          padding="0 0 15px 0"
+          line-height="24px"
+          font-style="italic"
+        &gt;
+          "Uwielbiam mieć dostęp do nowości przed wszystkimi! Często kupuję rzeczy, które szybko się wyprzedają."
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="14px"
+          color="#6b7280"
+          align="center"
+        &gt;
+          ⭐⭐⭐⭐⭐ - Magdalena K., członkini Premium
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#059669" padding="45px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="28px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          ⏰ Oferta startowa kończy się 31 sierpnia 2024!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="20px"
+          color="#d1fae5"
+          align="center"
+          padding="0 0 30px 0"
+          line-height="28px"
+        &gt;
+          Nie przegap 30% zniżki na pierwszy miesiąc&lt;br/&gt;
+          w dowolnym planie członkowskim!
+        &lt;/mj-text&gt;
+        &lt;mj-button 
+          href="https://www.soitalian.pl//membership?utm_source=newsletter&campaign=vip-launch&code=VIP30"
+          background-color="#ffffff"
+          color="#059669"
+          font-size="20px"
+          font-weight="bold"
+          padding="18px 36px"
+          border-radius="8px"
+        &gt;
+          🌟 Dołącz z kodem VIP30
+        &lt;/mj-button&gt;
+        &lt;mj-text 
+          font-size="14px"
+          color="#a7f3d0"
+          align="center"
+          padding="25px 0 0 0"
+        &gt;
+          Możesz anulować członkostwo w każdej chwili • Bez zobowiązań długoterminowych
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;
+&lt;/mj-wrapper&gt;
+&lt;/mj-body&gt;
+&lt;/mjml&gt;</pre>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard() {
+            const code = document.getElementById('mjml-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Skopiowano!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

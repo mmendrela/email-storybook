@@ -1,0 +1,452 @@
+<mjml lang="pl">
+  <mj-head>
+  <mj-title>Natalia, dołącz do SoItalian VIP Club!</mj-title><mj-preview>Ekskluzywny program członkowski SoItalian VIP Club. Tylko do 31 sierpnia 2024 - 30% zniżki z kodem VIP30!</mj-preview>
+</mj-head><mj-body background-color="#f7f4f2">
+  <mj-wrapper max-width="600px">
+  <mj-section background-color="#1f2937" padding="50px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="36px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+          line-height="44px"
+        >
+          🌟 SoItalian VIP Club 🌟
+        </mj-text>
+        <mj-text 
+          font-size="20px"
+          color="#f59e0b"
+          align="center"
+          padding="0 0 15px 0"
+          font-weight="bold"
+        >
+          PREMIERA PROGRAMU CZŁONKOWSKIEGO
+        </mj-text>
+        <mj-text 
+          font-size="18px"
+          color="#d1d5db"
+          align="center"
+          line-height="26px"
+        >
+          Cześć Natalia! Zapraszamy Cię do ekskluzywnego klubu<br/>
+          z wyjątkowymi korzyściami i priorytetowym dostępem do nowości.
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#dc2626" padding="20px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 10px 0"
+        >
+          🔥 OFERTA STARTOWA - 30% ZNIŻKI!
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#fecaca"
+          align="center"
+        >
+          Kod: <strong>VIP30</strong> • Ważne do: 31 sierpnia 2024
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#f9fafb" padding="40px 20px">
+  
+        <mj-column 
+          width="33.333333333333336%"
+          background-color="#f8fafc"
+          border="1px solid #e5e7eb"
+          border-radius="12px"
+          padding="30px 20px"
+        >
+          
+          
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            SoItalian Basic
+          </mj-text>
+          
+          <mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            49 zł
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            miesięcznie
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            • 5% zniżki na wszystkie produkty<br>• Dostęp do wyprzedaży 24h wcześniej<br>• Bezpłatna dostawa od 100 zł<br>• Newsletter z nowościami<br>• Program punktów lojalnościowych
+          </mj-text>
+          
+          <mj-button 
+            href="https://www.soitalian.pl//membership/basic?utm_source=newsletter&code=VIP30"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          >
+            Wybierz Basic
+          </mj-button>
+        </mj-column>
+      
+        <mj-column 
+          width="33.333333333333336%"
+          background-color="#ffffff"
+          border="2px solid #3b82f6"
+          border-radius="12px"
+          padding="30px 20px"
+        >
+          
+          <mj-text 
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            text-transform="uppercase"
+            align="center"
+            padding="6px 12px"
+            border-radius="16px"
+            margin="0 0 20px 0"
+          >
+            NAJPOPULARNIEJSZY
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            SoItalian Premium
+          </mj-text>
+          
+          <mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            89 zł
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            miesięcznie
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            • Wszystko z pakietu Basic<br>• 10% zniżki na wszystkie produkty<br>• Darmowa dostawa zawsze<br>• Ekskluzywne produkty tylko dla Premium<br>• Priorytetowy dostęp do nowości<br>• Personalna stylistka online<br>• Specjalne prezenty urodzinowe
+          </mj-text>
+          
+          <mj-button 
+            href="https://www.soitalian.pl//membership/premium?utm_source=newsletter&code=VIP30"
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          >
+            Wybierz Premium
+          </mj-button>
+        </mj-column>
+      
+        <mj-column 
+          width="33.333333333333336%"
+          background-color="#f8fafc"
+          border="1px solid #e5e7eb"
+          border-radius="12px"
+          padding="30px 20px"
+        >
+          
+          <mj-text 
+            background-color="#3b82f6"
+            color="#ffffff"
+            font-size="12px"
+            font-weight="bold"
+            text-transform="uppercase"
+            align="center"
+            padding="6px 12px"
+            border-radius="16px"
+            margin="0 0 20px 0"
+          >
+            EKSKLUZYWNY
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="20px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 15px 0"
+          >
+            SoItalian VIP
+          </mj-text>
+          
+          <mj-text 
+            font-size="36px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            139 zł
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            miesięcznie
+          </mj-text>
+          
+          
+          <mj-text 
+            font-size="14px"
+            color="#374151"
+            line-height="22px"
+            align="center"
+            padding="0 0 25px 0"
+          >
+            • Wszystko z pakietu Premium<br>• 15% zniżki na wszystkie produkty<br>• Ekskluzywna kolekcja VIP<br>• Osobista stylistka w sklepie<br>• Bezpłatne alteracje i dopasowania<br>• VIP events i pokazy mody<br>• Concierge shopping service<br>• Prezenty sezonowe
+          </mj-text>
+          
+          <mj-button 
+            href="https://www.soitalian.pl//membership/vip?utm_source=newsletter&code=VIP30"
+            background-color="#1f2937"
+            color="#ffffff"
+            font-size="14px"
+            font-weight="bold"
+            padding="12px 24px"
+            border-radius="6px"
+            width="100%"
+          >
+            Zostań VIP
+          </mj-button>
+        </mj-column>
+      
+</mj-section><mj-section background-color="#f3f4f6" padding="40px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="26px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 30px 0"
+        >
+          ✨ Dlaczego SoItalian VIP Club?
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#f3f4f6" padding="0 30px 40px">
+  
+      <mj-column width="50%">
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 20px 0"
+          line-height="24px"
+        >
+          <strong>🎯 Ekskluzywność</strong><br/>
+          Dostęp do limitowanych kolekcji i produktów niedostępnych publicznie
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 20px 0"
+          line-height="24px"
+        >
+          <strong>👗 Styling</strong><br/>
+          Profesjonalne doradztwo stylistyczne dopasowane do Twoich potrzeb
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 15px 0 0"
+          line-height="24px"
+        >
+          <strong>🎊 Wydarzenia</strong><br/>
+          Zaproszenia na ekskluzywne pokazy mody i wydarzenia VIP
+        </mj-text>
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 20px 15px"
+          line-height="24px"
+        >
+          <strong>💰 Oszczędności</strong><br/>
+          Stałe zniżki od 5% do 15% na wszystkie zakupy przez cały rok
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 20px 15px"
+          line-height="24px"
+        >
+          <strong>🚚 Wygoda</strong><br/>
+          Darmowe dostawy, szybkie zwroty i priorytetowa obsługa
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          padding="0 0 0 15px"
+          line-height="24px"
+        >
+          <strong>🎁 Prezenty</strong><br/>
+          Regularne niespodzianki, prezenty urodzinowe i sezonowe
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#ffffff" padding="40px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 25px 0"
+        >
+          💬 Co mówią nasze VIP członkinie:
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          align="center"
+          padding="0 0 15px 0"
+          line-height="24px"
+          font-style="italic"
+        >
+          "Program VIP to najlepsza inwestycja! Oszczędzam setki złotych rocznie, a stylistka zawsze doradzi mi idealne produkty."
+        </mj-text>
+        <mj-text 
+          font-size="14px"
+          color="#6b7280"
+          align="center"
+          padding="0 0 25px 0"
+        >
+          ⭐⭐⭐⭐⭐ - Karolina W., członkini VIP od 2 lat
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#374151"
+          align="center"
+          padding="0 0 15px 0"
+          line-height="24px"
+          font-style="italic"
+        >
+          "Uwielbiam mieć dostęp do nowości przed wszystkimi! Często kupuję rzeczy, które szybko się wyprzedają."
+        </mj-text>
+        <mj-text 
+          font-size="14px"
+          color="#6b7280"
+          align="center"
+        >
+          ⭐⭐⭐⭐⭐ - Magdalena K., członkini Premium
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#059669" padding="45px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="28px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+        >
+          ⏰ Oferta startowa kończy się 31 sierpnia 2024!
+        </mj-text>
+        <mj-text 
+          font-size="20px"
+          color="#d1fae5"
+          align="center"
+          padding="0 0 30px 0"
+          line-height="28px"
+        >
+          Nie przegap 30% zniżki na pierwszy miesiąc<br/>
+          w dowolnym planie członkowskim!
+        </mj-text>
+        <mj-button 
+          href="https://www.soitalian.pl//membership?utm_source=newsletter&campaign=vip-launch&code=VIP30"
+          background-color="#ffffff"
+          color="#059669"
+          font-size="20px"
+          font-weight="bold"
+          padding="18px 36px"
+          border-radius="8px"
+        >
+          🌟 Dołącz z kodem VIP30
+        </mj-button>
+        <mj-text 
+          font-size="14px"
+          color="#a7f3d0"
+          align="center"
+          padding="25px 0 0 0"
+        >
+          Możesz anulować członkostwo w każdej chwili • Bez zobowiązań długoterminowych
+        </mj-text>
+      </mj-column>
+    
+</mj-section>
+</mj-wrapper>
+</mj-body>
+</mjml>

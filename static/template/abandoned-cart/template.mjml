@@ -1,0 +1,289 @@
+<mjml lang="pl">
+  <mj-head>
+  <mj-title>Monika, Twój koszyk czeka na Ciebie!</mj-title><mj-preview>Nie zapomnij o swoich ulubionych produktach! Koszyk CART_006393 z 15% zniżką przez następne 24h.</mj-preview>
+</mj-head><mj-body background-color="#f7f4f2">
+  <mj-wrapper max-width="600px">
+  <mj-section background-color="#f59e0b" padding="20px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="18px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0"
+        >
+          ⏰ Twój koszyk wkrótce wygaśnie! Zostało tylko 24 godzin
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#ffffff" padding="40px 30px 20px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="28px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 20px 0"
+        >
+          Cześć Monika! 👋
+        </mj-text>
+        <mj-text 
+          font-size="18px"
+          color="#4b5563"
+          align="center"
+          line-height="26px"
+          padding="0 0 25px 0"
+        >
+          Zauważyliśmy, że zostwiłaś produkty w koszyku.<br/>
+          Nie martw się - zachowaliśmy je dla Ciebie!
+        </mj-text>
+        <mj-text 
+          font-size="20px"
+          font-weight="bold"
+          color="#dc2626"
+          align="center"
+          padding="0 0 10px 0"
+        >
+          🎁 Specjalnie dla Ciebie: 15% zniżki!
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#059669"
+          align="center"
+          font-weight="bold"
+        >
+          Kod: POWROT15
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#ffffff" padding="30px 30px 20px">
+  
+        <mj-column>
+          <mj-text 
+            font-size="24px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+          >
+            🛒 Twój zarezerwowany koszyk
+          </mj-text>
+        </mj-column>
+      
+</mj-section><mj-section background-color="#ffffff" border="1px solid #e5e7eb" border-radius="8px" padding="20px 30px">
+  
+        <mj-column width="25%">
+          <mj-image 
+            src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+            alt="Top Rieti Pink"
+            width="80px"
+            border-radius="6px"
+          />
+        </mj-column>
+        <mj-column width="50%">
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+          >
+            Quantity: 1
+          </mj-text>
+        </mj-column>
+        <mj-column width="25%">
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="right"
+          >
+            199 zł
+          </mj-text>
+        </mj-column>
+      
+        <mj-column width="25%">
+          <mj-image 
+            src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+            alt="Lovaria Hat – black ribbon"
+            width="80px"
+            border-radius="6px"
+          />
+        </mj-column>
+        <mj-column width="50%">
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="center"
+            padding="0 0 5px 0"
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+          <mj-text 
+            font-size="14px"
+            color="#6b7280"
+            align="center"
+          >
+            Quantity: 2
+          </mj-text>
+        </mj-column>
+        <mj-column width="25%">
+          <mj-text 
+            font-size="16px"
+            font-weight="bold"
+            color="#1f2937"
+            align="right"
+          >
+            149 zł
+          </mj-text>
+        </mj-column>
+      
+</mj-section><mj-section background-color="#f9fafb" border="1px solid #e5e7eb" border-radius="8px" padding="30px">
+  
+        <mj-column>
+          <mj-table>
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td style="padding: 12px 0; font-size: 16px; color: #374151;">Subtotal</td>
+              <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">497 zł</td>
+            </tr>
+            
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td style="padding: 12px 0; font-size: 16px; color: #374151;">Shipping</td>
+              <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">0 zł</td>
+            </tr>
+            
+            
+            <tr style="border-bottom: 1px solid #e5e7eb;">
+              <td style="padding: 12px 0; font-size: 16px; color: #374151;">Tax</td>
+              <td style="padding: 12px 0; font-size: 16px; color: #374151; text-align: right; font-weight: 600;">- 75 zł</td>
+            </tr>
+            
+            <tr>
+              <td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; font-weight: bold;">Total</td>
+              <td style="padding: 20px 0 12px 0; font-size: 20px; color: #111827; text-align: right; font-weight: bold;">422 zł</td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      
+</mj-section><mj-section padding="30px">
+  
+        <mj-column>
+          <mj-button 
+            href="https://www.soitalian.pl//cart/CART_006393?utm_source=abandoned_cart&discount=POWROT15"
+            background-color="#059669"
+            color="#ffffff"
+            font-size="18px"
+            font-weight="bold"
+            padding="16px 40px"
+            border-radius="8px"
+            width="100%"
+          >
+            Dokończ zakupy
+          </mj-button>
+        </mj-column>
+      
+</mj-section><mj-section background-color="#ecfdf5" padding="30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#065f46"
+          align="center"
+          padding="0 0 20px 0"
+        >
+          🎯 Dlaczego warto dokończyć zakupy już teraz?
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          padding="0 0 12px 0"
+          line-height="24px"
+        >
+          ✅ <strong>Ekskluzywna zniżka 15%</strong> - tylko dla Ciebie!
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          padding="0 0 12px 0"
+          line-height="24px"
+        >
+          ✅ <strong>Darmowa dostawa</strong> przy zamówieniu powyżej 150 zł
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          padding="0 0 12px 0"
+          line-height="24px"
+        >
+          ✅ <strong>30 dni na zwrot</strong> bez podania przyczyny
+        </mj-text>
+        <mj-text 
+          font-size="16px"
+          color="#047857"
+          align="left"
+          line-height="24px"
+        >
+          ✅ <strong>Szybka dostawa</strong> w 1-2 dni robocze
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color="#1f2937" padding="40px 30px">
+  
+      <mj-column>
+        <mj-text 
+          font-size="24px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 15px 0"
+        >
+          ⏰ Nie czekaj dłużej!
+        </mj-text>
+        <mj-text 
+          font-size="18px"
+          color="#f3f4f6"
+          align="center"
+          padding="0 0 25px 0"
+          line-height="26px"
+        >
+          Koszyk zostanie usunięty za 24 godzin.<br/>
+          Kod <strong>POWROT15</strong> wygasa wraz z koszykiem!
+        </mj-text>
+        <mj-button 
+          href="https://www.soitalian.pl//cart/CART_006393?utm_source=abandoned_cart&discount=POWROT15"
+          background-color="#dc2626"
+          color="#ffffff"
+          font-size="20px"
+          font-weight="bold"
+          padding="18px 36px"
+          border-radius="8px"
+        >
+          🚀 Dokończ zakupy z 15% zniżką
+        </mj-button>
+        <mj-text 
+          font-size="14px"
+          color="#9ca3af"
+          align="center"
+          padding="20px 0 0 0"
+        >
+          Masz pytania? <a href="mailto:sklep@soitalian.pl" style="color: #f59e0b;">Napisz do nas</a>
+        </mj-text>
+      </mj-column>
+    
+</mj-section>
+</mj-wrapper>
+</mj-body>
+</mjml>

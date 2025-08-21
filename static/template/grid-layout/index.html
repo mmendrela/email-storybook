@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Siatki - Email Template Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .preview-info {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .preview-info h2 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .preview-info p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .email-preview {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .email-frame {
+            width: 100%;
+            min-height: 800px;
+            border: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📧 Layout Siatki</h1>
+            <a href="/" class="back-link">← Powrót do listy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="preview-info">
+            <h2>Informacje o szablonie</h2>
+            <p>Układ siatki z FourCardsRow</p>
+            <strong>ID:</strong> grid-layout
+        </div>
+        
+        <div class="actions">
+            <a href="/template/grid-layout/mjml" class="btn btn-secondary">📄 Zobacz MJML</a>
+            <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
+        </div>
+        
+        <div class="email-preview">
+            <iframe class="email-frame" srcdoc="<mjml lang=&quot;pl&quot;>
+  <mj-head>
+  <mj-title>Karolina, sprawdź letnia kolekcja!</mj-title><mj-preview>Nowa kolekcja letnia kolekcja już dostępna! Kod: GRID25 ważny do 15 września 2024.</mj-preview>
+</mj-head><mj-body background-color=&quot;#f7f4f2&quot;>
+  <mj-wrapper max-width=&quot;600px&quot;>
+  <mj-section background-color=&quot;#1f2937&quot; padding=&quot;30px&quot;>
+  
+      <mj-column>
+        <mj-text 
+          font-size=&quot;32px&quot;
+          font-weight=&quot;bold&quot;
+          color=&quot;#ffffff&quot;
+          align=&quot;center&quot;
+          padding=&quot;0 0 15px 0&quot;
+        >
+          Letnia Kolekcja 2024
+        </mj-text>
+        <mj-text 
+          font-size=&quot;18px&quot;
+          color=&quot;#d1d5db&quot;
+          align=&quot;center&quot;
+          line-height=&quot;26px&quot;
+        >
+          Cześć Karolina! Odkryj naszą najnowszą kolekcję w wyjątkowych cenach.
+        </mj-text>
+      </mj-column>
+    
+</mj-section><mj-section background-color=&quot;#ffffff&quot; padding=&quot;40px 30px 20px&quot;>
+  
+          <mj-column>
+            <mj-text 
+              font-size=&quot;28px&quot;
+              font-weight=&quot;bold&quot;
+              color=&quot;#1f2937&quot;
+              align=&quot;center&quot;
+              padding=&quot;0 0 20px 0&quot;
+            >
+              ✨ Wybierz swój ulubiony ✨
+            </mj-text>
+          </mj-column>
+        
+</mj-section><mj-section background-color=&quot;#ffffff&quot; padding=&quot;15px 20px&quot;>
+  
+        <mj-column width=&quot;50%&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg&quot;
+            alt=&quot;Top Rieti Pink&quot;
+            width=&quot;180px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            line-height=&quot;24px&quot;
+            height=&quot;50px&quot;
+          >
+            Top Rieti Pink
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;35px&quot;
+          >
+            
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>229 zł</span>
+            
+            179 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=grid-layout&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;16px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;14px 28px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;180px&quot;
+          >
+            Dodaj do koszyka
+          </mj-button>
+        </mj-column>
+      
+        <mj-column width=&quot;50%&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg&quot;
+            alt=&quot;Lovaria Hat – black ribbon&quot;
+            width=&quot;180px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            line-height=&quot;24px&quot;
+            height=&quot;50px&quot;
+          >
+            Lovaria Hat – black ribbon
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;35px&quot;
+          >
+            
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>169 zł</span>
+            
+            139 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=grid-layout&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;16px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;14px 28px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;180px&quot;
+          >
+            Dodaj do koszyka
+          </mj-button>
+        </mj-column>
+      
+</mj-section><mj-section background-color=&quot;#ffffff&quot; padding=&quot;15px 20px 40px&quot;>
+  
+        <mj-column width=&quot;50%&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg&quot;
+            alt=&quot;Lovaria Hat – lace ribbon&quot;
+            width=&quot;180px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            line-height=&quot;24px&quot;
+            height=&quot;50px&quot;
+          >
+            Lovaria Hat – lace ribbon
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;35px&quot;
+          >
+            
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>179 zł</span>
+            
+            149 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=grid-layout&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;16px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;14px 28px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;180px&quot;
+          >
+            Dodaj do koszyka
+          </mj-button>
+        </mj-column>
+      
+        <mj-column width=&quot;50%&quot;>
+          <mj-image 
+            src=&quot;https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg&quot;
+            alt=&quot;Top Rieti Pink (Biała)&quot;
+            width=&quot;180px&quot;
+            border-radius=&quot;8px&quot;
+            padding=&quot;0 0 15px 0&quot;
+            align=&quot;center&quot;
+          />
+          <mj-text 
+            font-size=&quot;18px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#1f2937&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 8px 0&quot;
+            line-height=&quot;24px&quot;
+            height=&quot;50px&quot;
+          >
+            Top Rieti Pink (Biała)
+          </mj-text>
+          <mj-text 
+            font-size=&quot;14px&quot;
+            color=&quot;#6b7280&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 12px 0&quot;
+            line-height=&quot;18px&quot;
+            height=&quot;35px&quot;
+          >
+            
+          </mj-text>
+          <mj-text 
+            font-size=&quot;20px&quot;
+            font-weight=&quot;bold&quot;
+            color=&quot;#059669&quot;
+            align=&quot;center&quot;
+            padding=&quot;0 0 15px 0&quot;
+          >
+            
+              <span style=&quot;text-decoration: line-through; color: #9ca3af; font-size: 16px; margin-right: 8px;&quot;>239 zł</span>
+            
+            189 zł
+          </mj-text>
+          <mj-button 
+            href=&quot;https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=grid-layout&variant=white&quot;
+            background-color=&quot;#1f2937&quot;
+            color=&quot;#ffffff&quot;
+            font-size=&quot;16px&quot;
+            font-weight=&quot;bold&quot;
+            padding=&quot;14px 28px&quot;
+            border-radius=&quot;6px&quot;
+            width=&quot;180px&quot;
+          >
+            Dodaj do koszyka
+          </mj-button>
+        </mj-column>
+      
+</mj-section><mj-section background-color=&quot;#f3f4f6&quot; padding=&quot;40px 30px&quot;>
+  
+      <mj-column>
+        <mj-text 
+          font-size=&quot;24px&quot;
+          font-weight=&quot;bold&quot;
+          color=&quot;#1f2937&quot;
+          align=&quot;center&quot;
+          padding=&quot;0 0 20px 0&quot;
+        >
+          🎁 Specjalna oferta tylko dla Ciebie!
+        </mj-text>
+        <mj-text 
+          font-size=&quot;36px&quot;
+          font-weight=&quot;bold&quot;
+          color=&quot;#dc2626&quot;
+          align=&quot;center&quot;
+          padding=&quot;0 0 15px 0&quot;
+        >
+          -25%
+        </mj-text>
+        <mj-text 
+          font-size=&quot;18px&quot;
+          color=&quot;#374151&quot;
+          align=&quot;center&quot;
+          padding=&quot;0 0 25px 0&quot;
+          line-height=&quot;26px&quot;
+        >
+          Użyj kodu: <strong>GRID25</strong><br/>
+          Oferta ważna do: 15 września 2024
+        </mj-text>
+        <mj-button 
+          href=&quot;https://www.soitalian.pl/?utm_source=newsletter&utm_campaign=grid-layout&code=GRID25&quot;
+          background-color=&quot;#dc2626&quot;
+          color=&quot;#ffffff&quot;
+          font-size=&quot;18px&quot;
+          font-weight=&quot;bold&quot;
+          padding=&quot;16px 32px&quot;
+          border-radius=&quot;8px&quot;
+        >
+          🛒 Kup teraz z kodem GRID25
+        </mj-button>
+      </mj-column>
+    
+</mj-section>
+</mj-wrapper>
+</mj-body>
+</mjml>"></iframe>
+        </div>
+    </div>
+</body>
+</html>

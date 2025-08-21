@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Zdjęć - MJML Source</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+        }
+        
+        .back-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.2);
+            transition: background 0.2s ease;
+        }
+        
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+        
+        .code-container {
+            background: #1f2937;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .code-header {
+            background: #374151;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #4b5563;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .code-title {
+            color: #f3f4f6;
+            font-weight: 500;
+        }
+        
+        .copy-btn {
+            background: #6b7280;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        
+        .copy-btn:hover {
+            background: #9ca3af;
+        }
+        
+        pre {
+            margin: 0;
+            padding: 1.5rem;
+            overflow-x: auto;
+            background: #1f2937;
+            color: #f3f4f6;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .actions {
+                flex-direction: column;
+            }
+            
+            pre {
+                padding: 1rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>📄 Galeria Zdjęć - MJML</h1>
+            <a href="/" class="back-link">← Powrót do listy</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="actions">
+            <a href="/template/photo-gallery" class="btn btn-secondary">👁️ Podgląd email</a>
+            <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
+        </div>
+        
+        <div class="code-container">
+            <div class="code-header">
+                <span class="code-title">Kod MJML - Galeria Zdjęć</span>
+                <button class="copy-btn" onclick="copyToClipboard()">📋 Kopiuj</button>
+            </div>
+            <pre id="mjml-code">&lt;mjml lang="pl"&gt;
+  &lt;mj-head&gt;
+  &lt;mj-title&gt;Aleksandra, zobacz Stylizacje SoItalian!&lt;/mj-title&gt;&lt;mj-preview&gt;Letnia Sesja 2024 - ekskluzywne zdjęcia z sesji. Poznaj nasze produkty w akcji! #SoItalianStyle&lt;/mj-preview&gt;
+&lt;/mj-head&gt;&lt;mj-body background-color="#f7f4f2"&gt;
+  &lt;mj-wrapper max-width="600px"&gt;
+  &lt;mj-section background-color="#1f2937" padding="50px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="34px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+          line-height="42px"
+        &gt;
+          Stylizacje SoItalian ✨
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="20px"
+          color="#d1d5db"
+          align="center"
+          padding="0 0 15px 0"
+        &gt;
+          Letnia Sesja 2024
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#9ca3af"
+          align="center"
+          line-height="24px"
+        &gt;
+          Cześć Aleksandra! Zobacz jak pięknie wyglądają nasze produkty&lt;br/&gt;
+          w profesjonalnej sesji zdjęciowej Studio Fashion.
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="40px 30px 20px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          📸 Ekskluzywne kadry z sesji
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#4b5563"
+          align="center"
+          line-height="24px"
+          padding="0 0 25px 0"
+        &gt;
+          Każdy kadr opowiada historię o stylu, elegancji i wyjątkowej jakości naszych produktów.
+          Zobacz jak pięknie prezentują się nasze bestsellery w prawdziwym życiu!
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="10px 20px"&gt;
+  
+            &lt;mj-column width="50%"&gt;
+              &lt;mj-button href="https://www.soitalian.pl/pl/topy/604660-532220-top-rieti-pink.html?utm_source=newsletter&utm_campaign=photo-gallery" background-color="transparent" padding="0"&gt;
+                &lt;mj-image 
+                  src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+                  alt="Top Rieti Pink w sesji Letnia Sesja 2024"
+                  border-radius="8px"
+                  padding="5px"
+                /&gt;
+              &lt;/mj-button&gt;
+            &lt;/mj-column&gt;
+          
+            &lt;mj-column width="50%"&gt;
+              &lt;mj-button href="https://www.soitalian.pl/pl/akcesoria/604671-kapelusz-lovaria-beige-z-czarna-wstazka.html?utm_source=newsletter&utm_campaign=photo-gallery" background-color="transparent" padding="0"&gt;
+                &lt;mj-image 
+                  src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+                  alt="Lovaria Hat – black ribbon w sesji Letnia Sesja 2024"
+                  border-radius="8px"
+                  padding="5px"
+                /&gt;
+              &lt;/mj-button&gt;
+            &lt;/mj-column&gt;
+          
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="10px 20px"&gt;
+  
+            &lt;mj-column width="50%"&gt;
+              &lt;mj-button href="https://www.soitalian.pl/pl/akcesoria/604670-kapelusz-lovaria-beige-z-azurowa-wstazka.html?utm_source=newsletter&utm_campaign=photo-gallery" background-color="transparent" padding="0"&gt;
+                &lt;mj-image 
+                  src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+                  alt="Lovaria Hat – lace ribbon w sesji Letnia Sesja 2024"
+                  border-radius="8px"
+                  padding="5px"
+                /&gt;
+              &lt;/mj-button&gt;
+            &lt;/mj-column&gt;
+          
+            &lt;mj-column width="50%"&gt;
+              &lt;mj-button href="https://www.soitalian.pl/?utm_source=newsletter&utm_campaign=photo-gallery" background-color="transparent" padding="0"&gt;
+                &lt;mj-image 
+                  src="https://www.soitalian.pl/85583-small_default/top-rieti-pink.jpg"
+                  alt="Kompletna stylizacja SoItalian"
+                  border-radius="8px"
+                  padding="5px"
+                /&gt;
+              &lt;/mj-button&gt;
+            &lt;/mj-column&gt;
+          
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="10px 20px"&gt;
+  
+            &lt;mj-column width="50%"&gt;
+              &lt;mj-button href="https://www.soitalian.pl//behind-scenes?utm_source=newsletter" background-color="transparent" padding="0"&gt;
+                &lt;mj-image 
+                  src="https://www.soitalian.pl/85586-small_default/kapelusz-lovaria-beige-z-czarna-wstazka.jpg"
+                  alt="Behind the scenes - sesja fotograficzna"
+                  border-radius="8px"
+                  padding="5px"
+                /&gt;
+              &lt;/mj-button&gt;
+            &lt;/mj-column&gt;
+          
+            &lt;mj-column width="50%"&gt;
+              &lt;mj-button href="https://www.soitalian.pl//new-collection?utm_source=newsletter" background-color="transparent" padding="0"&gt;
+                &lt;mj-image 
+                  src="https://www.soitalian.pl/85585-small_default/kapelusz-lovaria-beige-z-azurowa-wstazka.jpg"
+                  alt="Model prezentuje kolekcję SoItalian"
+                  border-radius="8px"
+                  padding="5px"
+                /&gt;
+              &lt;/mj-button&gt;
+            &lt;/mj-column&gt;
+          
+&lt;/mj-section&gt;&lt;mj-section background-color="#f3f4f6" padding="40px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="24px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          📱 Podziel się swoim stylem!
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="18px"
+          color="#4b5563"
+          align="center"
+          padding="0 0 25px 0"
+          line-height="26px"
+        &gt;
+          Masz nasze produkty? Pokaż jak je nosisz!&lt;br/&gt;
+          Oznacz nas w swoich zdjęciach używając hashtagu:
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="28px"
+          font-weight="bold"
+          color="#059669"
+          align="center"
+          padding="0 0 25px 0"
+        &gt;
+          #SoItalianStyle
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#6b7280"
+          align="center"
+          line-height="24px"
+        &gt;
+          Najpiękniejsze zdjęcia udostępnimy w naszych mediach społecznościowych!&lt;br/&gt;
+          &lt;strong&gt;Instagram:&lt;/strong&gt; @soitalian_official | &lt;strong&gt;Facebook:&lt;/strong&gt; SoItalian
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#ffffff" padding="40px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="22px"
+          font-weight="bold"
+          color="#1f2937"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          🎬 Kulisy sesji fotograficznej
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#4b5563"
+          align="left"
+          padding="0 0 15px 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;📅 Data sesji:&lt;/strong&gt; Lato 2024, słoneczny dzień w Warszawie
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#4b5563"
+          align="left"
+          padding="0 0 15px 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;📸 Fotograf:&lt;/strong&gt; Studio Fashion - specjaliści od fotografii fashion
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#4b5563"
+          align="left"
+          padding="0 0 15px 0"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;👗 Stylizacja:&lt;/strong&gt; Kompletne looky z najnowszej kolekcji SoItalian
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="16px"
+          color="#4b5563"
+          align="left"
+          line-height="24px"
+        &gt;
+          &lt;strong&gt;💫 Klimat:&lt;/strong&gt; Elegancja spotyka casualowy szyk - idealnie na lato!
+        &lt;/mj-text&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;&lt;mj-section background-color="#059669" padding="45px 30px"&gt;
+  
+      &lt;mj-column&gt;
+        &lt;mj-text 
+          font-size="26px"
+          font-weight="bold"
+          color="#ffffff"
+          align="center"
+          padding="0 0 20px 0"
+        &gt;
+          Zachwycona sesją, Aleksandra? 
+        &lt;/mj-text&gt;
+        &lt;mj-text 
+          font-size="18px"
+          color="#d1fae5"
+          align="center"
+          padding="0 0 30px 0"
+          line-height="26px"
+        &gt;
+          Wszystkie produkty z sesji dostępne są w naszym sklepie online.&lt;br/&gt;
+          Stwórz swoją własną stylizację inspirowaną profesjonalnymi zdjęciami!
+        &lt;/mj-text&gt;
+        &lt;mj-button 
+          href="https://www.soitalian.pl/?utm_source=newsletter&utm_campaign=photo-gallery&ref=session"
+          background-color="#ffffff"
+          color="#059669"
+          font-size="20px"
+          font-weight="bold"
+          padding="18px 36px"
+          border-radius="8px"
+        &gt;
+          📸 Kup produkty z sesji
+        &lt;/mj-button&gt;
+      &lt;/mj-column&gt;
+    
+&lt;/mj-section&gt;
+&lt;/mj-wrapper&gt;
+&lt;/mj-body&gt;
+&lt;/mjml&gt;</pre>
+        </div>
+    </div>
+    
+    <script>
+        function copyToClipboard() {
+            const code = document.getElementById('mjml-code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Skopiowano!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
