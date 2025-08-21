@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const mjml = require('mjml');
 
 // Import the compiled email templates
 const { 
@@ -293,6 +294,9 @@ function generateIndexHTML(templates) {
 
 // Generate individual template pages
 function generateTemplateHTML(template, mjmlContent) {
+  // Compile MJML to HTML
+  const mjmlResult = mjml(mjmlContent);
+  const compiledHTML = mjmlResult.html;
   return `<!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -439,11 +443,12 @@ function generateTemplateHTML(template, mjmlContent) {
         
         <div class="actions">
             <a href="/template/${template.id}/mjml" class="btn btn-secondary">📄 Zobacz MJML</a>
+            <a href="/template/${template.id}/preview.html" class="btn btn-secondary" target="_blank">🚀 Otwórz w nowej karcie</a>
             <a href="/" class="btn btn-primary">📋 Wszystkie szablony</a>
         </div>
         
         <div class="email-preview">
-            <iframe class="email-frame" srcdoc="${mjmlContent.replace(/"/g, '&quot;')}"></iframe>
+            <iframe class="email-frame" srcdoc="${compiledHTML.replace(/"/g, '&quot;')}"></iframe>
         </div>
     </div>
 </body>
@@ -666,6 +671,10 @@ for (const template of emailTemplates) {
       fs.mkdirSync(templateDir, { recursive: true });
     }
     
+    // Compile MJML to HTML for better performance
+    const mjmlResult = mjml(mjmlContent);
+    const compiledHTML = mjmlResult.html;
+    
     // Generate template preview page
     const templateHTML = generateTemplateHTML(template, mjmlContent);
     fs.writeFileSync(path.join(templateDir, 'index.html'), templateHTML);
@@ -676,6 +685,9 @@ for (const template of emailTemplates) {
     
     // Save raw MJML for direct access
     fs.writeFileSync(path.join(templateDir, 'template.mjml'), mjmlContent);
+    
+    // Save compiled HTML for direct preview
+    fs.writeFileSync(path.join(templateDir, 'preview.html'), compiledHTML);
     
     successCount++;
     console.log(`  ✅ Generated pages for ${template.name}`);

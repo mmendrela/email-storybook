@@ -12,7 +12,12 @@
     "lint": "eslint src --ext .ts,.tsx",
     "format": "prettier --write src"
   },
-  "keywords": ["mjml", "email", "components", "react-email"],
+  "keywords": [
+    "mjml",
+    "email",
+    "components",
+    "react-email"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
@@ -25,6 +30,6 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "mjml": "^4.15.0"
+    "mjml": "^4.15.3"
   }
 }

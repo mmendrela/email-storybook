@@ -1,6 +1,6 @@
 <mjml lang="pl">
   <mj-head>
-  <mj-title>Monika, Twój koszyk czeka na Ciebie!</mj-title><mj-preview>Nie zapomnij o swoich ulubionych produktach! Koszyk CART_006393 z 15% zniżką przez następne 24h.</mj-preview>
+  <mj-title>Monika, Twój koszyk czeka na Ciebie!</mj-title><mj-preview>Nie zapomnij o swoich ulubionych produktach! Koszyk CART_393031 z 15% zniżką przez następne 24h.</mj-preview>
 </mj-head><mj-body background-color="#f7f4f2">
   <mj-wrapper max-width="600px">
   <mj-section background-color="#f59e0b" padding="20px 30px">
@@ -178,7 +178,7 @@
   
         <mj-column>
           <mj-button 
-            href="https://www.soitalian.pl//cart/CART_006393?utm_source=abandoned_cart&discount=POWROT15"
+            href="https://www.soitalian.pl//cart/CART_393031?utm_source=abandoned_cart&discount=POWROT15"
             background-color="#059669"
             color="#ffffff"
             font-size="18px"
@@ -263,7 +263,7 @@
           Kod <strong>POWROT15</strong> wygasa wraz z koszykiem!
         </mj-text>
         <mj-button 
-          href="https://www.soitalian.pl//cart/CART_006393?utm_source=abandoned_cart&discount=POWROT15"
+          href="https://www.soitalian.pl//cart/CART_393031?utm_source=abandoned_cart&discount=POWROT15"
           background-color="#dc2626"
           color="#ffffff"
           font-size="20px"
